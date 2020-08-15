@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import navLinks from "../components/navLinks"
+import navLinks from "../components/DATA/navLinks"
 
 //     'moreAboutMe.html': [contact, home],
 //     'podcasts.html': [contact, home, moreAboutMe],

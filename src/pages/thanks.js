@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/seo"
-import navLinks from "../components/navLinks"
+import navLinks from "../components/DATA/navLinks"
 
 function Thanks() {
   return (
