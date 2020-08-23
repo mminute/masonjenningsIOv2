@@ -1,9 +1,9 @@
-const ABANDONED = 'abandoned';
-const ALWAY_LISTEN = 'alwaysListen';
-const SOMETIMES_LISTEN = 'sometimesListen';
-const STARTED_LISTENING = 'startedListening';
-const TO_CHECKOUT = 'toCheckout';
-const USE_TO_LISTEN = 'useToListen';
+export const ABANDONED = 'abandoned';
+export const ALWAY_LISTEN = 'alwaysListen';
+export const SOMETIMES_LISTEN = 'sometimesListen';
+export const STARTED_LISTENING = 'startedListening';
+export const TO_CHECKOUT = 'toCheckout';
+export const USE_TO_LISTEN = 'useToListen';
 
 export default [
     {
