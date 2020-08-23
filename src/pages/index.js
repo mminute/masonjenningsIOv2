@@ -8,9 +8,11 @@ import Image from '../components/image';
 
 function IndexPage() {
   const parallaxRef = useRef();
+  const contentRef = useRef();
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+    contentRef.current.style.marginTop = `${parallaxRef.current.clientHeight}px`;
   });
 
   useEffect(() => {
@@ -28,7 +30,8 @@ function IndexPage() {
       }px)`;
 
       parallaxRef.current.style.opacity =
-        (parallaxRef.current.clientHeight - window.scrollY) / parallaxRef.current.clientHeight;
+        (parallaxRef.current.clientHeight - window.scrollY) /
+        parallaxRef.current.clientHeight;
     }
   }
 
@@ -43,24 +46,36 @@ function IndexPage() {
   return (
     <Layout headerLinks={headerLinks}>
       <SEO title="Home" />
-      <div ref={parallaxRef} style={{ width: '100%' }}>
+      <div
+        ref={parallaxRef}
+        style={{
+          position: 'absolute',
+          left: '0px',
+          top: '0px',
+          width: '100%',
+          height: '100%',
+          zIndex: -1,
+        }}
+      >
         <EniacHeroModule />
       </div>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-        <Image />
-        <Image />
-        <Image />
-        <Image />
-        <Image />
-        <Image />
-        <Image />
+      <div ref={contentRef}>
+        <h1>Hi people</h1>
+        <p>Welcome to your new Gatsby site.</p>
+        <p>Now go build something great.</p>
+        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+          <Image />
+          <Image />
+          <Image />
+          <Image />
+          <Image />
+          <Image />
+          <Image />
+          <Image />
+        </div>
+        <Link to="/page-2/">Go to page 2</Link> <br />
+        <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
       </div>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </Layout>
   );
 }
