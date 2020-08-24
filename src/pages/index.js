@@ -5,20 +5,28 @@ import SEO from '../components/seo';
 import navLinks from '../components/DATA/navLinks';
 import EniacHeroModule from '../components/Home/EniacHeroModule';
 import Image from '../components/image';
-import eniacImage from '../images/00-eniac.jpg';
-import throttle from 'lodash/throttle';
 
 function IndexPage() {
   const parallaxRef = useRef();
   const contentRef = useRef();
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    contentRef.current.style.marginTop = `${parallaxRef.current.clientHeight}px`;
+  });
+
+  useEffect(() => {
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   function handleScroll() {
     // https://stackoverflow.com/questions/29725828/update-style-of-a-component-onscroll-in-react-js
     // "I found that setState'ing inside scroll event for animation is choppy. I had to manually set the style of components using refs. – Ryan Rho May 13 '15 at 21:38"
-    if (parallaxRef.current && parallaxRef.current.clientHeight / 0.55 > window.scrollY) {
+    if (parallaxRef.current) {
       parallaxRef.current.style.transform = `translate(0px, ${
-        Math.floor(window.scrollY * 0.55)
+        window.scrollY * 0.55
       }px)`;
 
       parallaxRef.current.style.opacity =
@@ -27,49 +35,6 @@ function IndexPage() {
     }
   }
 
-  const throttled = throttle(handleScroll, 10);
-
-  useEffect(() => {
-    window.addEventListener('scroll', throttled);
-    contentRef.current.style.marginTop = `${parallaxRef.current.clientHeight}px`;
-  });
-
-  useEffect(() => {
-    return () => {
-      window.removeEventListener('scroll', throttled);
-    };
-  }, []);
-
-  // function handleScroll() {
-  //   // https://stackoverflow.com/questions/29725828/update-style-of-a-component-onscroll-in-react-js
-  //   // "I found that setState'ing inside scroll event for animation is choppy. I had to manually set the style of components using refs. – Ryan Rho May 13 '15 at 21:38"
-  //   if (parallaxRef.current && parallaxRef.current.clientHeight / 0.55 > window.scrollY) {
-  //     parallaxRef.current.style.transform = `translate(0px, ${
-  //       Math.floor(window.scrollY * 0.55)
-  //     }px)`;
-
-  //     parallaxRef.current.style.opacity =
-  //       (parallaxRef.current.clientHeight - window.scrollY) /
-  //       parallaxRef.current.clientHeight;
-  //   }
-  // }
-
-  // function step(_timestamp) {
-  //   if (parallaxRef.current && parallaxRef.current.clientHeight / 0.55 > window.scrollY) {
-  //     parallaxRef.current.style.transform = `translate(0px, ${
-  //       Math.floor(window.scrollY * 0.55)
-  //     }px)`;
-
-  //     parallaxRef.current.style.opacity =
-  //       (parallaxRef.current.clientHeight - window.scrollY) /
-  //       parallaxRef.current.clientHeight;
-    
-  //     window.requestAnimationFrame(step);
-  //   }
-  // }
-
-  // window.requestAnimationFrame(step);
-
   const headerLinks = [
     { to: '#about-me', txt: 'About Me' },
     { to: '#my-languages', txt: 'Languages' },
@@ -77,8 +42,6 @@ function IndexPage() {
     navLinks.resume,
     navLinks.contact,
   ];
-
-  // <EniacHeroModule />
 
   return (
     <Layout headerLinks={headerLinks}>
@@ -94,7 +57,7 @@ function IndexPage() {
           zIndex: -1,
         }}
       >
-        <img src={eniacImage} />
+        <EniacHeroModule />
       </div>
       <div ref={contentRef}>
         <h1>Hi people</h1>
