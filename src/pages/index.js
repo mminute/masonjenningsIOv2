@@ -25,9 +25,9 @@ function IndexPage() {
     // https://stackoverflow.com/questions/29725828/update-style-of-a-component-onscroll-in-react-js
     // "I found that setState'ing inside scroll event for animation is choppy. I had to manually set the style of components using refs. – Ryan Rho May 13 '15 at 21:38"
     if (parallaxRef.current) {
-      parallaxRef.current.style.transform = `translate(0px, ${
+      parallaxRef.current.style.transform = `translate3d(0px, ${
         window.scrollY * 0.55
-      }px)`;
+      }px, 0px)`;
 
       parallaxRef.current.style.opacity =
         (parallaxRef.current.clientHeight - window.scrollY) /
