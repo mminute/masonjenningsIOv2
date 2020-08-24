@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
-import navLinks from "../components/DATA/navLinks"
+import navLinks from '../components/DATA/navLinks';
 
 const NotFoundPage = () => (
   <Layout headerLinks={[navLinks.contact, navLinks.home]}>

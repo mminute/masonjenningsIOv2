@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  Box, Heading, Link, Text,
+} from 'gestalt';
 import Layout from '../../components/Layout/Layout';
 import SEO from '../../components/seo';
 import navLinks from '../../components/DATA/navLinks';
@@ -10,12 +13,11 @@ import podcastList, {
   TO_CHECKOUT,
   USE_TO_LISTEN,
 } from '../../components/DATA/podcasts';
-import { Box, Heading, Link, Text } from 'gestalt';
 import 'gestalt/dist/gestalt.css';
 
 function Podcast({ data }) {
   return (
-    <Box marginBottom={2} >
+    <Box marginBottom={2}>
       <Text>
         <Link href={data.url} target="blank">{data.name}</Link>
       </Text>
@@ -33,12 +35,15 @@ const categoryTitle = {
 };
 
 function Category({ id }) {
-  const categoryItems = podcastList.filter(itm => itm.category === id);
+  const categoryItems = podcastList.filter((itm) => itm.category === id);
 
   return (
     <Box smColumn={12} mdColumn={6} marginTop={4}>
       <section>
-        <Heading size="sm">{categoryTitle[id]}:</Heading>
+        <Heading size="sm">
+          {categoryTitle[id]}
+          :
+        </Heading>
         <Box paddingY={3}>
           {categoryItems.map((itm, idx) => (
             <Podcast key={idx} data={itm} />
@@ -62,7 +67,7 @@ function Podcasts() {
           TO_CHECKOUT,
           USE_TO_LISTEN,
           ABANDONED,
-        ].map(id => (
+        ].map((id) => (
           <Category key={id} id={id} />
         ))}
       </Box>

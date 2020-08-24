@@ -10,17 +10,6 @@ function IndexPage() {
   const parallaxRef = useRef();
   const contentRef = useRef();
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    contentRef.current.style.marginTop = `${parallaxRef.current.clientHeight}px`;
-  });
-
-  useEffect(() => {
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   function handleScroll() {
     // https://stackoverflow.com/questions/29725828/update-style-of-a-component-onscroll-in-react-js
     // "I found that setState'ing inside scroll event for animation is choppy. I had to manually set the style of components using refs. – Ryan Rho May 13 '15 at 21:38"
@@ -29,11 +18,19 @@ function IndexPage() {
         window.scrollY * 0.55
       }px, 0px)`;
 
-      parallaxRef.current.style.opacity =
-        (parallaxRef.current.clientHeight - window.scrollY) /
-        parallaxRef.current.clientHeight;
+      parallaxRef.current.style.opacity = (parallaxRef.current.clientHeight - window.scrollY)
+        / parallaxRef.current.clientHeight;
     }
   }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    contentRef.current.style.marginTop = `${parallaxRef.current.clientHeight}px`;
+  });
+
+  useEffect(() => () => {
+    window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const headerLinks = [
     { to: '#about-me', txt: 'About Me' },
@@ -63,7 +60,7 @@ function IndexPage() {
         <h1>Hi people</h1>
         <p>Welcome to your new Gatsby site.</p>
         <p>Now go build something great.</p>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+        <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
           <Image />
           <Image />
           <Image />
@@ -73,8 +70,10 @@ function IndexPage() {
           <Image />
           <Image />
         </div>
-        <Link to="/page-2/">Go to page 2</Link> <br />
-        <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+        <Link to="/page-2/">Go to page 2</Link>
+        {' '}
+        <br />
+        <Link to="/using-typescript/">Go to Using TypeScript</Link>
       </div>
     </Layout>
   );

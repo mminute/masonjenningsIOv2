@@ -1,8 +1,8 @@
 import React from 'react';
 import BackgroundImage from 'gatsby-background-image';
-import Montserrat from '../Fonts/Montserrat/Montserrat';
 import { graphql, StaticQuery } from 'gatsby';
 import { Box } from 'gestalt';
+import Montserrat from '../Fonts/Montserrat/Montserrat';
 
 const textStyles = {
   color: 'white',
@@ -24,12 +24,12 @@ function EniacHeroModule() {
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         const imageData = data.desktop.childImageSharp.fluid;
         return (
           <BackgroundImage
             preserveStackingContext
-            backgroundColor={`#040e18`}
+            backgroundColor="#040e18"
             fluid={imageData}
             Tag="section"
             style={{
@@ -54,7 +54,6 @@ function EniacHeroModule() {
                     styles={{
                       ...textStyles,
                       fontSize: '30px',
-                      fontWeight: 600,
                     }}
                   >
                     {'</CODE>'}
@@ -66,15 +65,15 @@ function EniacHeroModule() {
                   dangerouslySetInlineStyle={{ __style: { padding: '6px' } }}
                 >
                   <Montserrat styles={{ ...textStyles, marginBottom: '6px' }}>
-                    {'Software developer @ Pinterest'}
+                    Software developer @ Pinterest
                   </Montserrat>
 
                   <Montserrat styles={{ ...textStyles, marginBottom: '6px' }}>
-                    {'Minted in NYC @ //Flatiron School'}
+                    Minted in NYC @ //Flatiron School
                   </Montserrat>
 
                   <Montserrat styles={{ ...textStyles, marginBottom: '6px' }}>
-                    {'Making sweet, sweet code'}
+                    Making sweet, sweet code
                   </Montserrat>
                 </Box>
               </Box>

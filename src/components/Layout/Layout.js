@@ -12,7 +12,6 @@ import Header from '../Header';
 import Footer from '../Footer';
 import './Layout.css';
 
-
 const Layout = ({ children, headerLinks }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -26,7 +25,7 @@ const Layout = ({ children, headerLinks }) => {
 
   return (
     <>
-      <div className="fixedHeader" >
+      <div className="fixedHeader">
         <Header
           headerLinks={headerLinks}
           siteTitle={data.site.siteMetadata.title}

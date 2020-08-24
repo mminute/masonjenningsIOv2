@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link as GatsbyLink } from 'gatsby';
-import Link from './Link';
 import PropTypes from 'prop-types';
-import styles from './styles';
 import { Box, Row } from 'gestalt';
+import Link from './Link';
+import styles from './styles';
 import Montserrat from './Fonts/Montserrat/Montserrat';
 import 'gestalt/dist/gestalt.css';
 
@@ -16,37 +16,35 @@ function Header({ headerLinks, siteTitle }) {
     window.addEventListener('scroll', handleScroll);
   });
 
-  useEffect(() => {
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+  useEffect(() => () => {
+    window.removeEventListener('scroll', handleScroll);
   }, []);
 
   function handleScroll() {
     if (headerRef.current) {
       const headerMultiplier = 1.25;
-      const newOpacity =
-        1 -
-        (headerMultiplier * headerRef.current.clientHeight - window.scrollY) /
-          (headerMultiplier * headerRef.current.clientHeight);
+      const newOpacity = 1
+        - (headerMultiplier * headerRef.current.clientHeight - window.scrollY)
+          / (headerMultiplier * headerRef.current.clientHeight);
       setOpacity(newOpacity);
       setScrolled(window.scrollY > headerRef.current.clientHeight);
     }
   }
 
-  const linkStyles =
-    opacity < 0.75
-      ? {
-          backgroundColor: 'black',
-          color: 'white',
-        }
-      : {};
+  const linkStyles = opacity < 0.75
+    ? {
+      backgroundColor: 'black',
+      color: 'white',
+    }
+    : {};
 
   const links = headerLinks.map((linkInfo, idx) => (
     <Link
       key={idx}
       gatsbyLink={linkInfo.gatsbyLink}
-      styleOverrides={{ paddingBottom: '4px', paddingLeft: '4px', paddingRight: '4px', ...linkStyles }}
+      styleOverrides={{
+        paddingBottom: '4px', paddingLeft: '4px', paddingRight: '4px', ...linkStyles,
+      }}
       to={linkInfo.to}
       txt={linkInfo.txt}
     />
@@ -91,7 +89,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: '',
 };
 
 export default Header;

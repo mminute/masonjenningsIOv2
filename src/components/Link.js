@@ -31,7 +31,9 @@ const fontsMap = {
   inconsolata: Inconsolata,
 };
 
-function LinkComponent({ font, gatsbyLink, styleOverrides, to, txt }) {
+function LinkComponent({
+  font, gatsbyLink, styleOverrides, to, txt,
+}) {
   const makeFn = gatsbyLink ? makeGatsbyLink : makeLink;
   const Font = fontsMap[font] || fontsMap.montserrat;
 

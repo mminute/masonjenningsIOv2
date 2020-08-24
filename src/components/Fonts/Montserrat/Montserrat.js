@@ -1,8 +1,14 @@
 import React from 'react';
-import './Montserrat.css'
+import './Montserrat.css';
 
 function Montserrat({ children, styles }) {
-  return <div className="montserrat" style={styles || {}}>{children}</div>
+  const defaultStyles = { letterSpacing: '0.15em' };
+
+  return (
+    <div className="montserrat" style={{ ...defaultStyles, ...(styles || {}) }}>
+      {children}
+    </div>
+  );
 }
 
 export default Montserrat;
