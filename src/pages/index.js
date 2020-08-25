@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
+import About from '../components/Home/About';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
 import navLinks from '../components/DATA/navLinks';
@@ -56,24 +57,8 @@ function IndexPage() {
       >
         <EniacHeroModule />
       </div>
-      <div ref={contentRef}>
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-        <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-          <Image />
-          <Image />
-          <Image />
-          <Image />
-          <Image />
-          <Image />
-          <Image />
-          <Image />
-        </div>
-        <Link to="/page-2/">Go to page 2</Link>
-        {' '}
-        <br />
-        <Link to="/using-typescript/">Go to Using TypeScript</Link>
+      <div ref={contentRef} className="container">
+        <About />
       </div>
     </Layout>
   );
@@ -81,17 +66,21 @@ function IndexPage() {
 
 export default IndexPage;
 
-/* <section class="module-hero module-parallax module-fade module-full-height bg-dark-30" data-background="assets/images/00-eniac.jpg">
-<span class="container top-caption-down">
-    <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-            <h1 class="module-title font-alt align-center">
-                <span class="black-background" style="padding-left: 2px">&#60;/code&#62;</span>
-            </h1>
-            <div class="module-subtitle font-inc align-center black-background padded-y-2">
-                Web developer minted in NYC at //Flatiron School.  Making sweet, sweet code.
-            </div>
-        </div>
-    </div>
-</span>
-</section > */
+
+{/* <h1>Hi people</h1>
+<p>Welcome to your new Gatsby site.</p>
+<p>Now go build something great.</p>
+<div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
+  <Image />
+  <Image />
+  <Image />
+  <Image />
+  <Image />
+  <Image />
+  <Image />
+  <Image />
+</div>
+<Link to="/page-2/">Go to page 2</Link>
+{' '}
+<br />
+<Link to="/using-typescript/">Go to Using TypeScript</Link> */}
