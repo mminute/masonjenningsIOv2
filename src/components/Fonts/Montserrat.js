@@ -1,6 +1,5 @@
 import React from 'react';
-import './Montserrat.css';
-
+// TODO: Is this file pointless
 function Montserrat({ children, styles }) {
   const defaultStyles = { letterSpacing: '0.15em' };
 

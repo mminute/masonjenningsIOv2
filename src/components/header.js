@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Box, Row } from 'gestalt';
 import Link from './Link';
 import styles from './styles';
-import Montserrat from './Fonts/Montserrat/Montserrat';
 import 'gestalt/dist/gestalt.css';
 
 function Header({ headerLinks, siteTitle }) {
@@ -59,12 +58,19 @@ function Header({ headerLinks, siteTitle }) {
       ref={headerRef}
     >
       <Box display="flex" alignItems="baseline" paddingX={12}>
-        <h1 style={{ fontSize: '28px' }}>
+        <h1 style={{
+          fontSize: '28px',
+          paddingBottom: '4px',
+          paddingLeft: '4px',
+          paddingRight: '4px',
+          ...linkStyles
+        }}>
           <GatsbyLink
             to="/"
-            style={{ textDecoration: 'none', color: styles.fontColor }}
+            style={{ textDecoration: 'none', color: styles.fontColor, ...linkStyles }}
           >
-            <Montserrat
+            <div
+              className="montserrat"
               styles={{
                 paddingBottom: '4px',
                 paddingLeft: '4px',
@@ -73,7 +79,7 @@ function Header({ headerLinks, siteTitle }) {
               }}
             >
               {siteTitle}
-            </Montserrat>
+            </div>
           </GatsbyLink>
         </h1>
         <Box display="flex" direction="row" flex="grow" justifyContent="end">

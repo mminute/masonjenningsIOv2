@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'gatsby';
 import About from '../components/Home/About';
-import Layout from '../components/Layout/Layout';
-import SEO from '../components/seo';
-import navLinks from '../components/DATA/navLinks';
 import EniacHeroModule from '../components/Home/EniacHeroModule';
-import Image from '../components/image';
+import Languages from '../components/Home/Languages';
+import PlaceAndContact from '../components/Home/PlaceAndContact';
+import Bootcamp from '../components/Home/Bootcamp';
+import Layout from '../components/Layout/Layout';
+import navLinks from '../components/DATA/navLinks';
+import SEO from '../components/seo';
 
 function IndexPage() {
   const parallaxRef = useRef();
@@ -58,29 +59,32 @@ function IndexPage() {
         <EniacHeroModule />
       </div>
       <div ref={contentRef} className="container">
-        <About />
+        <About paddingTop={parallaxRef.current?.clientHeight / 6} />
+      </div>
+
+      <div style={{ paddingTop: '100px', paddingBottom: '100px' }}>
+        <hr className="section-divider" />
+      </div>
+
+      <div className="container">
+        <Languages />
+      </div>
+
+      <div style={{ paddingTop: '100px', paddingBottom: '100px' }}>
+        <hr className="section-divider" />
+      </div>
+
+      <Bootcamp />
+
+      <div style={{ paddingTop: '100px', paddingBottom: '100px' }}>
+        <hr className="section-divider" />
+      </div>
+
+      <div className="container">
+        <PlaceAndContact />
       </div>
     </Layout>
   );
 }
 
 export default IndexPage;
-
-
-{/* <h1>Hi people</h1>
-<p>Welcome to your new Gatsby site.</p>
-<p>Now go build something great.</p>
-<div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-  <Image />
-  <Image />
-  <Image />
-  <Image />
-  <Image />
-  <Image />
-  <Image />
-  <Image />
-</div>
-<Link to="/page-2/">Go to page 2</Link>
-{' '}
-<br />
-<Link to="/using-typescript/">Go to Using TypeScript</Link> */}

@@ -1,0 +1,13 @@
+.social-list {
+  font-size: 24px;
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.social-list li {
+  display: inline-block;
+}
+
+a {
+  color: #666;
+}

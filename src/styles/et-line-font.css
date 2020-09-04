@@ -1,0 +1,127 @@
+@font-face {
+	font-family: 'et-line';
+	src:url('../fonts/et-line.eot');
+	src:url('../fonts/et-line.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/et-line.woff') format('woff'),
+		url('../fonts/et-line.ttf') format('truetype'),
+		url('../fonts/et-line.svg#et-line') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icon-linkedin, .icon-pencil, .icon-twitter, .icon-puzzle, .icon-magnifying-glass, .icon-gears, .icon-tools, .icon-presentation, .icon-genius, .icon-tools-2, .icon-strategy, .icon-telescope, .icon-envelope, .icon-map-pin {
+	font-family: 'et-line';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display:inline-block;
+}
+
+.icon-linkedin:before {
+	content: "\e062";
+}
+
+.icon-pencil:before {
+	content: "\e032";
+}
+
+.icon-twitter:before {
+	content: "\e05e";
+}
+
+/* TODO: delete unused */
+
+.icon-puzzle:before {
+	content: "\e026";
+}
+
+.icon-magnifying-glass:before {
+	content: "\e037";
+}
+
+.icon-gears:before {
+	content: "\e02b";
+}
+
+.icon-tools:before {
+	content: "\e033";
+}
+
+.icon-presentation:before {
+	content: "\e00e";
+}
+
+.icon-telescope:before {
+	content: "\e02a";
+}
+
+.icon-lightbulb:before {
+	content: "\e030";
+}
+
+.icon-tools-2:before {
+	content: "\e034";
+}
+
+.icon-genius:before {
+	content: "\e046";
+}
+
+.icon-chat:before {
+	content: "\e049";
+}
+
+.icon-cloud:before {
+	content: "\e04b";
+}
+
+.icon-upload:before {
+	content: "\e04c";
+}
+.icon-download:before {
+	content: "\e04d";
+}
+
+.icon-hazardous:before {
+	content: "\e04f";
+}
+
+.icon-speedometer:before {
+	content: "\e051";
+}
+
+.icon-compass:before {
+	content: "\e053";
+}
+
+.icon-clock:before {
+	content: "\e055";
+}
+
+.icon-aperture:before {
+	content: "\e056";
+}
+
+.icon-quote:before {
+	content: "\e057";
+}
+
+.icon-alarmclock:before {
+	content: "\e059";
+}
+
+.icon-strategy:before {
+	content: "\e03b";
+}
+
+.icon-envelope:before {
+	content: "\e028";
+}
+
+.icon-map-pin:before {
+	content: "\e047";
+}

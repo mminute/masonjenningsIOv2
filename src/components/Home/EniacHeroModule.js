@@ -2,7 +2,7 @@ import React from 'react';
 import BackgroundImage from 'gatsby-background-image';
 import { graphql, StaticQuery } from 'gatsby';
 import { Box } from 'gestalt';
-import Montserrat from '../Fonts/Montserrat/Montserrat';
+import Montserrat from '../Fonts/Montserrat';
 
 const textStyles = {
   color: 'white',

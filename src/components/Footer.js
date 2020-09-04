@@ -1,12 +1,11 @@
 import React from 'react';
 import { Box } from 'gestalt';
 import Link from './Link';
-import Inconsolata from './Fonts/Inconsolata/Inconsolata';
 
 function Footer() {
   return (
     <footer style={{ color: '#666', backgroundColor: '#f5f5f5' }}>
-      <Inconsolata>
+      <div className="inconsolata">
         <Box display="flex" justifyContent="center" paddingY={6}>
           ©
           {' '}
@@ -16,7 +15,7 @@ function Footer() {
           ,
           ALL RIGHTS RESERVED
         </Box>
-      </Inconsolata>
+      </div>
     </footer>
   );
 }

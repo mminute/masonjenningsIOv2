@@ -1,7 +1,5 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import Inconsolata from './Fonts/Inconsolata/Inconsolata';
-import Montserrat from './Fonts/Montserrat/Montserrat';
 import styles from './styles';
 
 const linkStyles = {
@@ -26,18 +24,12 @@ function makeLink({ to, txt, styleOverrides }) {
   );
 }
 
-const fontsMap = {
-  montserrat: Montserrat,
-  inconsolata: Inconsolata,
-};
-
 function LinkComponent({
   font, gatsbyLink, styleOverrides, to, txt,
 }) {
   const makeFn = gatsbyLink ? makeGatsbyLink : makeLink;
-  const Font = fontsMap[font] || fontsMap.montserrat;
 
-  return <Font>{makeFn({ to, txt, styleOverrides })}</Font>;
+  return <div className={font || 'montserrat'}>{makeFn({ to, txt, styleOverrides })}</div>;
 }
 
 export default LinkComponent;
