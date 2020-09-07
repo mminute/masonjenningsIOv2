@@ -12,7 +12,7 @@ export default function Projects() {
       </Box>
 
       <Box column={6} margin="auto">
-        <div className="inconsolata gray" style={{ fontSize: '12px', textAlign: 'center', lineHeight: '21px' }}>
+        <div className="inconsolata gray textHeight-regular" style={{ fontSize: '12px', textAlign: 'center' }}>
           A sampling of my work thus far.  A collection of applications built to test my skillset, challenge me to learn new aspects of code, and build something useful.  Maybe even something cool.
         </div>
       </Box>

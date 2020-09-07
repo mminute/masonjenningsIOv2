@@ -23,10 +23,9 @@ function LabeledCountTo({ label, suffix, to }) {
           )}
         </CountTo>
         <div
-          className="inconsolata"
+          className="inconsolata textSize-regular"
           style={{
             color: 'white',
-            fontSize: '14px',
             margin: 'auto',
             paddingTop: '12px',
           }}

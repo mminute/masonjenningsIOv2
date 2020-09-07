@@ -16,12 +16,12 @@ export default function About({ paddingTop }) {
         <Box smColumn={12} mdColumn={6}>
           <h1 className="montserrat" style={{ fontSize: '30px' }}>ABOUT ME</h1>
 
-          <div className="inconsolata textSize-regular gray" style={{ lineHeight: '21px' }}>
+          <div className="inconsolata textSize-regular textHeight-regular gray">
             All of the books in the world contain no more information than is broadcast as video in a single large American city in a single year. Not all bits have equal value.<br />
             -Carl Sagan
           </div>
 
-          <div className="verdana textSize-regular gray" style={{ lineHeight: '21px' }}>
+          <div className="verdana textSize-regular textHeight-regular gray">
             <p>
               I'm a maker. It started with Lego and inevitably moved toward dismantling, poking, prodding, and reassembling more complex and expensive toys. Soon no household items were safe from my marauding Phillips head screwdriver, though all were returned in working order (with the notable and expensive exception of a Betamax videotape player). This curiosity naturally led me in the direction of architecture, engineering,technology, and design.
             </p>

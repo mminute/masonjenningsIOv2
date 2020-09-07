@@ -3,7 +3,7 @@ import ProjectEntry from './Project';
 
 function P({ children, styles }) {
   return (
-    <p className="inconsolata gray" style={{ fontSize: '12px', lineHeight: '21px', ...styles }}>
+    <p className="inconsolata gray textHeight-regular" style={{ fontSize: '12px', ...styles }}>
       {children}
     </p>
 
