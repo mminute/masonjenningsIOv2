@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import About from '../components/Home/About';
+import Projects from '../components/Home/Projects/Projects';
 import EniacHeroModule from '../components/Home/EniacHeroModule';
 import Languages from '../components/Home/Languages';
 import PlaceAndContact from '../components/Home/PlaceAndContact';
@@ -7,6 +8,23 @@ import Bootcamp from '../components/Home/Bootcamp';
 import Layout from '../components/Layout/Layout';
 import navLinks from '../components/DATA/navLinks';
 import SEO from '../components/seo';
+
+function Divider() {
+  return (
+    <div style={{ paddingTop: '100px', paddingBottom: '100px' }}>
+      <hr className="section-divider" />
+    </div>
+  );
+}
+
+function Section({ children }) {
+  return (
+    <>
+      {children}
+      <Divider />
+    </>
+  );
+}
 
 function IndexPage() {
   const parallaxRef = useRef();
@@ -58,27 +76,27 @@ function IndexPage() {
       >
         <EniacHeroModule />
       </div>
-      <div ref={contentRef} className="container">
-        <About paddingTop={parallaxRef.current?.clientHeight / 6} />
-      </div>
+      <Section>
+        <div ref={contentRef} className="container">
+          <About paddingTop={parallaxRef.current?.clientHeight / 6 || 0} />
+        </div>
+      </Section>
 
-      <div style={{ paddingTop: '100px', paddingBottom: '100px' }}>
-        <hr className="section-divider" />
-      </div>
+      <Section>
+        <div className="container">
+          <Languages />
+        </div>
+      </Section>
 
-      <div className="container">
-        <Languages />
-      </div>
+      <Section>
+        <Bootcamp />
+      </Section>
 
-      <div style={{ paddingTop: '100px', paddingBottom: '100px' }}>
-        <hr className="section-divider" />
-      </div>
-
-      <Bootcamp />
-
-      <div style={{ paddingTop: '100px', paddingBottom: '100px' }}>
-        <hr className="section-divider" />
-      </div>
+      <Section>
+        <div className="container">
+          <Projects />
+        </div>
+      </Section>
 
       <div className="container">
         <PlaceAndContact />

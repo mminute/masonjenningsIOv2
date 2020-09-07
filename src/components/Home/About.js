@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import Image from '../Image';
 import githubImg from '../../images/GitHub-Mark-32px.png';
 import { Link } from 'gatsby';
 import { Box, Mask } from 'gestalt';
@@ -9,18 +9,7 @@ import './About.css';
 
 
 export default function About({ paddingTop }) {
-  const profilePicData = useStaticQuery(graphql`
-  query {
-    placeholderImage: file(relativePath: { eq: "mason_jennings_pic.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`);
-
+  // TODO: Update Bio
   return (
     <section style={{ paddingTop }}>
       <Box display="flex" justifyContent="between">
@@ -45,7 +34,7 @@ export default function About({ paddingTop }) {
 
         <Box smColumn={12} mdColumn={4} marginStart={2} marginBottom="auto" marginTop="auto">
           <Mask rounding={3}>
-            <Img fluid={profilePicData.placeholderImage.childImageSharp.fluid} />
+            <Image fileName={'mason_jennings_pic.jpg'} />
           </Mask>
         </Box>
       </Box>
@@ -57,16 +46,16 @@ export default function About({ paddingTop }) {
           </div>
         </Link>
 
-        <ul class="social-list">
+        <ul className="social-list">
           <li>
             <Box marginEnd={3}>
-              <a href="http://twitter.com/mminute_" target="_blank"><span class="icon-twitter" /></a>
+              <a href="http://twitter.com/mminute_" target="_blank"><span className="icon-twitter" /></a>
             </Box>
           </li>
 
           <li>
             <Box marginEnd={3}>
-              <a href="https://www.linkedin.com/in/masonjennings" target="_blank"><span class="icon-linkedin" /></a>
+              <a href="https://www.linkedin.com/in/masonjennings" target="_blank"><span className="icon-linkedin" /></a>
             </Box>
           </li>
 
@@ -78,7 +67,7 @@ export default function About({ paddingTop }) {
 
           <li>
             <Box marginEnd={3}>
-              <a href="http://mminute.github.io" target="_blank"><span class="icon-pencil" /></a>
+              <a href="http://mminute.github.io" target="_blank"><span className="icon-pencil" /></a>
             </Box>
           </li>
         </ul>
