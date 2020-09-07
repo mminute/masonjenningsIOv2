@@ -2,11 +2,12 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Box, Row } from 'gestalt';
-import Link from './Link';
-import styles from './styles';
+import Link from '../Link';
+import styles from '../styles';
 import 'gestalt/dist/gestalt.css';
+import './Header.css';
 
-function Header({ headerLinks, siteTitle }) {
+function Header({ headerLinks, siteTitle, stickyHeader }) {
   const [opacity, setOpacity] = useState(0);
   const [scrolled, setScrolled] = useState(false);
   const headerRef = useRef();
@@ -20,7 +21,7 @@ function Header({ headerLinks, siteTitle }) {
   }, []);
 
   function handleScroll() {
-    if (headerRef.current) {
+    if (headerRef.current && !stickyHeader) {
       const headerMultiplier = 1.25;
       const newOpacity = 1
         - (headerMultiplier * headerRef.current.clientHeight - window.scrollY)
@@ -30,7 +31,7 @@ function Header({ headerLinks, siteTitle }) {
     }
   }
 
-  const linkStyles = opacity < 0.75
+  const linkStyles = opacity && !stickyHeader < 0.75
     ? {
       backgroundColor: 'black',
       color: 'white',
@@ -51,9 +52,10 @@ function Header({ headerLinks, siteTitle }) {
 
   return (
     <header
+      className={`${stickyHeader ? 'stickyHeader' : 'fixedHeader'}`}
       style={{
-        ...(scrolled ? { boxShadow: '0px 1px 0px 0px #f5f5f5' } : {}),
-        backgroundColor: `rgba(255, 255, 255, ${opacity})`,
+        ...(scrolled || stickyHeader ? { boxShadow: '0px 1px 0px 0px #f5f5f5' } : {}),
+        backgroundColor: `rgba(255, 255, 255, ${stickyHeader ? '100' : opacity})`,
       }}
       ref={headerRef}
     >

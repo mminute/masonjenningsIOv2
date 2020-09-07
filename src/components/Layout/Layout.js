@@ -8,11 +8,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-import Header from '../Header';
+import Header from '../Header/Header';
 import Footer from '../Footer';
 import './Layout.css';
 
-const Layout = ({ children, headerLinks }) => {
+const Layout = ({ children, headerLinks, stickyHeader }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,12 +25,11 @@ const Layout = ({ children, headerLinks }) => {
 
   return (
     <>
-      <div className="fixedHeader">
-        <Header
-          headerLinks={headerLinks}
-          siteTitle={data.site.siteMetadata.title}
-        />
-      </div>
+      <Header
+        headerLinks={headerLinks}
+        siteTitle={data.site.siteMetadata.title}
+        stickyHeader={stickyHeader}
+      />
       <main>
         {children}
       </main>

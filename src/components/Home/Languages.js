@@ -21,7 +21,7 @@ function Language({ icon, title, text }) {
         <div className={`icon-${icon} gray icon-large`} style={{ ...centerDiv }} />
       </Box>
 
-      <div className="gray inconsolata" style={{ ...centerDiv, fontSize: '14px' }}>
+      <div className="gray inconsolata textSize-regular" style={{ ...centerDiv }}>
         {title}
       </div>
 
