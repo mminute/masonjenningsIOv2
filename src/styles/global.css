@@ -60,3 +60,52 @@
 .icon-large {
   font-size: 36px;
 }
+
+.form-control {
+	font-family: "Inconsolata", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 11px;
+	height: 33px;
+	border: 1px solid #b2b2b2;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+.form-control:focus {
+	border-color: #CACACA;
+}
+
+.btn {
+	padding: 8px 37px;
+	font-family: "Inconsolata", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 11px;
+}
+
+.btn.focus,
+.btn.active.focus,
+.btn.active:focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+	outline: 0;
+}
+
+.btn.btn-round {
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
+}
+
+.btn.btn-g {
+	background: transparent;
+	border: 1px solid #b2b2b2;
+	color: #666;
+}
