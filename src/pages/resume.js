@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
 import navLinks from '../components/DATA/navLinks';
-import { AlphaSights, Pinterest, RamlaBenaisa } from '../components/Resume/Employments';
+import { AlphaSights, Pinterest, RamlaBenaisa } from '../components/Employments';
 import { Box } from 'gestalt';
 
 function Section({ children, title }) {

@@ -3,7 +3,6 @@ import Image from '../Image';
 import githubImg from '../../images/GitHub-Mark-32px.png';
 import { Link } from 'gatsby';
 import { Box, Mask } from 'gestalt';
-import { useStaticQuery, graphql } from 'gatsby';
 import '../../styles/et-line-font.css';
 import './About.css';
 

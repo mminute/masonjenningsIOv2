@@ -1,6 +1,22 @@
 import React from 'react';
 import { Box } from 'gestalt';
 
+function UL({ children }) {
+  return (
+    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+      {children}
+    </ul>
+  );
+}
+
+function LI({ children }) {
+  return (
+    <li>
+      + {children}
+    </li>
+  );
+}
+
 function Employment({ bizName, children, location, roles, url }) {
   return (
     <Box width={400} marginEnd={8} marginBottom={8}>
@@ -51,24 +67,24 @@ export function Pinterest() {
             TEAMS:
           </Box>
 
-          <ul>
-            <li>CORE PRODUCT: SHOPPING (07/2020 - PRESENT)</li>
-            <li>CP: LEGO (11/2019 - 07/2020)</li>
-            <li>CP: Core UI WEB (02/2018 - 11/2019)</li>
-            <li>CP: CORE PALTFORM WEB (02/2018 - 11/2019)</li>
-            <li>WEB CORE EXPERIENCE (04/2016 - 06-2017)</li>
-          </ul>
+          <UL>
+            <LI>CORE PRODUCT: SHOPPING (07/2020 - PRESENT)</LI>
+            <LI>CP: LEGO (11/2019 - 07/2020)</LI>
+            <LI>CP: Core UI WEB (02/2018 - 11/2019)</LI>
+            <LI>CP: CORE PALTFORM WEB (02/2018 - 11/2019)</LI>
+            <LI>WEB CORE EXPERIENCE (04/2016 - 06-2017)</LI>
+          </UL>
         </Box>
 
         <Box marginBottom={2}>
           RESPONSIBILITIES & ACCOMPLISHMENTS
         </Box>
-        <ul>
-          <li>FRONT-END ENGINEER DEVELOPING CORE USER FLOWS AND SHOPPING PRODUCTS</li>
-          <li>ENSURED CONSISTENT REPRESENTATION OF CREATOR/ADVERTISER CONTENT</li>
-          <li>MIGRATED PYTHON/DJANGO APP TO REACT</li>
-          <li>REDUCED PASSWORD RESET HELP REQUESTS BY 25%</li>
-        </ul>
+        <UL>
+          <LI>FRONT-END ENGINEER DEVELOPING CORE USER FLOWS AND SHOPPING PRODUCTS</LI>
+          <LI>ENSURED CONSISTENT REPRESENTATION OF CREATOR/ADVERTISER CONTENT</LI>
+          <LI>MIGRATED PYTHON/DJANGO APP TO REACT</LI>
+          <LI>REDUCED PASSWORD RESET HELP REQUESTS BY 25%</LI>
+        </UL>
       </Box>
     </Employment>
   );
@@ -82,11 +98,11 @@ export function AlphaSights() {
       url="https://www.alphasights.com/"
       roles={[{ title: 'SOFTWARE ENGINEERING APPRENTICE', dates: '10/2015 - 03/2016' }]}
     >
-      <ul>
-        <li>MAINTAINED LEGACY RAILS APP WITH 177,780 LINES OF CODE.</li>
-        <li>IMPLEMENTED ANALYTICS BACK-END IN SUPPORT OF TRACKING TWILIO CALLS AND CALL QUALITY.</li>
-        <li>BUILT METRICS AGGREGATION, REPORTING TOOLING, AND DASHBOARDS</li>
-      </ul>
+      <UL>
+        <LI>MAINTAINED LEGACY RAILS APP WITH 177,780 LINES OF CODE.</LI>
+        <LI>IMPLEMENTED ANALYTICS BACK-END IN SUPPORT OF TRACKING TWILIO CALLS AND CALL QUALITY.</LI>
+        <LI>BUILT METRICS AGGREGATION, REPORTING TOOLING, AND DASHBOARDS</LI>
+      </UL>
     </Employment>
   );
 }
@@ -99,12 +115,12 @@ export function RamlaBenaisa() {
       url="https://ramla-benaissa.com/"
       roles={[{ title: 'INTERN ARCHITECT', dates: '8/2013 - 5/2015' }]}
     >
-      <ul>
-        <li>IMPLEMENTED PRODUCTS/CONSTRUCTION MATERIALS DATABASE USING MS ACCESS AND VISUAL BASIC.</li>
-        <li>PRODUCED CONSTRUCTION AND DESIGN DOCUMENTATION USING 3D MODELLING SOFTWARE SUCH AS REVIT, AUTOCAD, SKETCHUP, RHINO, SOLIDWORKS, AND 3DSMAX.</li>
-        <li>ENSURED COMPLIANCE WITH MUNICIPAL, STATE, AND NATIONAL BUILDING AND FIRE CODES AS WELL AS AMERICANS WITH DISABILITIES ACT.</li>
-        <li>MANAGED COORDINATION BETWEEN MECHANICAL, ELECTRICAL, STRUCTURAL, AND CIVIL CONSULTING ENGINEER TEAMS AND TRADES.</li>
-      </ul>
+      <UL>
+        <LI>IMPLEMENTED PRODUCTS/CONSTRUCTION MATERIALS DATABASE USING MS ACCESS AND VISUAL BASIC.</LI>
+        <LI>PRODUCED CONSTRUCTION AND DESIGN DOCUMENTATION USING 3D MODELLING SOFTWARE SUCH AS REVIT, AUTOCAD, SKETCHUP, RHINO, SOLIDWORKS, AND 3DSMAX.</LI>
+        <LI>ENSURED COMPLIANCE WITH MUNICIPAL, STATE, AND NATIONAL BUILDING AND FIRE CODES AS WELL AS AMERICANS WITH DISABILITIES ACT.</LI>
+        <LI>MANAGED COORDINATION BETWEEN MECHANICAL, ELECTRICAL, STRUCTURAL, AND CIVIL CONSULTING ENGINEER TEAMS AND TRADES.</LI>
+      </UL>
     </Employment>
   );
 }
