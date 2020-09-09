@@ -73,7 +73,7 @@ function Contact() {
                 <input
                   type="hidden"
                   name="_next"
-                  value="//masonjennings.io/thanks.html"
+                  value="//masonjennings.io/thanks"
                 />
                 <input
                   type="hidden"
