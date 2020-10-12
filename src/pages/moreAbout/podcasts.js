@@ -1,10 +1,7 @@
 import React from 'react';
-import {
-  Box, Heading, Link, Text,
-} from 'gestalt';
-import Layout from '../../components/Layout/Layout';
-import SEO from '../../components/seo';
-import navLinks from '../../components/DATA/navLinks';
+import Itm from '../../components/Itm';
+import MoreAboutLayout from '../../components/MoreAboutLayout';
+import { Box } from 'gestalt';
 import podcastList, {
   ABANDONED,
   ALWAY_LISTEN,
@@ -12,18 +9,8 @@ import podcastList, {
   STARTED_LISTENING,
   TO_CHECKOUT,
   USE_TO_LISTEN,
-} from '../../components/DATA/podcasts';
+} from '../../DATA/podcasts';
 import 'gestalt/dist/gestalt.css';
-
-function Podcast({ data }) {
-  return (
-    <Box marginBottom={2}>
-      <Text>
-        <Link href={data.url} target="blank">{data.name}</Link>
-      </Text>
-    </Box>
-  );
-}
 
 const categoryTitle = {
   [ABANDONED]: 'I’ve abandoned',
@@ -40,14 +27,20 @@ function Category({ id }) {
   return (
     <Box smColumn={12} mdColumn={6} marginTop={4}>
       <section>
-        <Heading size="sm">
-          {categoryTitle[id]}
-          :
-        </Heading>
-        <Box paddingY={3}>
-          {categoryItems.map((itm, idx) => (
-            <Podcast key={idx} data={itm} />
-          ))}
+        <h2 className="montserrat" style={{ fontSize: '18px' }}>
+          {categoryTitle[id]}:
+        </h2>
+          
+        <Box>
+          <div className="inconsolata gray textHeight-regular">
+            <ul>
+              {categoryItems.map((itm, idx) => (
+                <Itm key={idx}>
+                  <a href={itm.url} target="_blank">{itm.name}</a>
+                </Itm>
+              ))}
+            </ul>
+          </div>
         </Box>
       </section>
     </Box>
@@ -56,10 +49,8 @@ function Category({ id }) {
 
 function Podcasts() {
   return (
-    <Layout headerLinks={[navLinks.contact, navLinks.home]}>
-      <SEO title="Podcasts" />
-      <Heading size="md">Podcasts page</Heading>
-      <Box display="flex" wrap>
+    <MoreAboutLayout title="Podcasts">
+      <Box display="flex" marginStart={12} wrap>
         {[
           ALWAY_LISTEN,
           SOMETIMES_LISTEN,
@@ -71,7 +62,7 @@ function Podcasts() {
           <Category key={id} id={id} />
         ))}
       </Box>
-    </Layout>
+    </MoreAboutLayout>
   );
 }
 

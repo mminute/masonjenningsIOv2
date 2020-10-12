@@ -1,14 +1,11 @@
 import React from 'react';
 import Image from '../Image';
-import githubImg from '../../images/GitHub-Mark-32px.png';
+import SocialList from '../SocialList/SocialList';
 import { Link } from 'gatsby';
 import { Box, Mask } from 'gestalt';
 import '../../styles/et-line-font.css';
-import './About.css';
-
 
 export default function About({ paddingTop }) {
-  // TODO: Update Bio
   return (
     <section style={{ paddingTop }}>
       <Box display="flex" justifyContent="between">
@@ -22,7 +19,15 @@ export default function About({ paddingTop }) {
 
           <div className="verdana textSize-regular textHeight-regular gray">
             <p>
-              I'm a maker. It started with Lego and inevitably moved toward dismantling, poking, prodding, and reassembling more complex and expensive toys. Soon no household items were safe from my marauding Phillips head screwdriver, though all were returned in working order (with the notable and expensive exception of a Betamax videotape player). This curiosity naturally led me in the direction of architecture, engineering,technology, and design.
+              I'm a maker.
+            </p>
+
+            <p>
+              I'm also a software engineer.
+            </p>
+
+            <p>
+              It started with Lego and inevitably moved toward dismantling, poking, prodding, and reassembling more complex and expensive toys. Soon no household items were safe from my marauding Phillips head screwdriver, though all were returned in working order (with the notable and expensive exception of a Betamax videotape player). This curiosity naturally led me in the direction of architecture, engineering, technology, and design.
             </p>
 
             <p>
@@ -45,31 +50,7 @@ export default function About({ paddingTop }) {
           </div>
         </Link>
 
-        <ul className="social-list">
-          <li>
-            <Box marginEnd={3}>
-              <a href="http://twitter.com/mminute_" target="_blank"><span className="icon-twitter" /></a>
-            </Box>
-          </li>
-
-          <li>
-            <Box marginEnd={3}>
-              <a href="https://www.linkedin.com/in/masonjennings" target="_blank"><span className="icon-linkedin" /></a>
-            </Box>
-          </li>
-
-          <li>
-            <Box marginEnd={3}>
-              <a href="https://github.com/mminute" target="_blank" ><img src={githubImg} alt="github" style={{ width: '24px', marginBottom: '-2px' }} /></a>
-            </Box>
-          </li>
-
-          <li>
-            <Box marginEnd={3}>
-              <a href="http://mminute.github.io" target="_blank"><span className="icon-pencil" /></a>
-            </Box>
-          </li>
-        </ul>
+        <SocialList />
       </Box>
     </section>
   );

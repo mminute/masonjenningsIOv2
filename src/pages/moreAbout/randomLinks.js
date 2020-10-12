@@ -1,14 +1,26 @@
 import React from 'react';
-import Layout from '../../components/Layout/Layout';
-import SEO from '../../components/seo';
-import navLinks from '../../components/DATA/navLinks';
+import Itm from '../../components/Itm';
+import MoreAboutLayout from '../../components/MoreAboutLayout';
 
 function RandomLinks() {
   return (
-    <Layout headerLinks={[navLinks.contact, navLinks.home]}>
-      <SEO title="Random Links" />
-      <h1>Random Links page</h1>
-    </Layout>
+    <MoreAboutLayout title="Random Links">
+      <div className="inconsolata gray textHeight-regular">
+        <ul>
+          <Itm>
+            <a href="https://www.servomagazine.com/magazine/article/grant-imahara-eulogy" target="_blank">Grant Imahara Eulogy</a>
+          </Itm>
+
+          <Itm>
+            <a href="https://www.selfdefined.app/" target="_blank">Self-Defined</a>- "A modern dictionary about us." by <a href="https://twitter.com/TatianaTMac" target="_blank">Tatiana Mac</a>
+          </Itm>
+
+          <Itm>
+            <a href="https://window-swap.com/" target="_blank">WindowSwap</a>- Take a peek through someone else's window view
+          </Itm>
+        </ul>
+      </div>
+    </MoreAboutLayout>
   );
 }
 

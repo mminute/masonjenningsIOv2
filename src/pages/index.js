@@ -6,7 +6,7 @@ import Languages from '../components/Home/Languages';
 import PlaceAndContact from '../components/Home/PlaceAndContact';
 import Bootcamp from '../components/Home/Bootcamp';
 import Layout from '../components/Layout/Layout';
-import navLinks from '../components/DATA/navLinks';
+import navLinks from '../DATA/navLinks';
 import SEO from '../components/seo';
 
 function Divider() {
@@ -53,6 +53,7 @@ function IndexPage() {
   }, []);
 
   const headerLinks = [
+    // TODO: id links not working
     { to: '#about-me', txt: 'About Me' },
     { to: '#my-languages', txt: 'Languages' },
     { to: '#my-projects', txt: 'Projects' },

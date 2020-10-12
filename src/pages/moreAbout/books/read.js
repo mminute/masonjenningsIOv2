@@ -1,15 +1,3 @@
-import React from 'react';
-import Layout from '../../../components/Layout/Layout';
-import SEO from '../../../components/seo';
-import navLinks from '../../../components/DATA/navLinks';
+import BooksReadPage from '../../../components/Books/BooksReadPage';
 
-function BooksRead() {
-  return (
-    <Layout headerLinks={[navLinks.contact, navLinks.home]}>
-      <SEO title="Books I've Read" />
-      <h1>Books I've Read page</h1>
-    </Layout>
-  );
-}
-
-export default BooksRead;
+export default BooksReadPage;

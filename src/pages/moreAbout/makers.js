@@ -1,14 +1,19 @@
 import React from 'react';
-import Layout from '../../components/Layout/Layout';
-import SEO from '../../components/seo';
-import navLinks from '../../components/DATA/navLinks';
+import Itm from '../../components/Itm';
+import MoreAboutLayout from '../../components/MoreAboutLayout';
+
 
 function Makers() {
   return (
-    <Layout headerLinks={[navLinks.contact, navLinks.home]}>
-      <SEO title="Makers" />
-      <h1>Makers page</h1>
-    </Layout>
+    <MoreAboutLayout title="Makers">
+      <div className="inconsolata gray textHeight-regular">
+        <ul>
+          <Itm>
+            <a href="https://www.servomagazine.com/magazine/article/underwater-remotely-operated-vehicles-the-next-big-thing-in-robotics" target="_blank">Underwater Remote Operated Vehicles: The Next Big Thing in Robitics?</a>
+          </Itm>
+        </ul>
+      </div>
+    </MoreAboutLayout>
   );
 }
 

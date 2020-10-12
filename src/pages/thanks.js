@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
-import navLinks from '../components/DATA/navLinks';
+import navLinks from '../DATA/navLinks';
 import BackgroundImage from 'gatsby-background-image';
 import { graphql, StaticQuery } from 'gatsby';
 import { Box } from 'gestalt';
