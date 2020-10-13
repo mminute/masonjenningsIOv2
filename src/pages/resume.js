@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
-import navLinks from '../components/DATA/navLinks';
+import navLinks from '../DATA/navLinks';
 import { AlphaSights, Pinterest, RamlaBenaisa } from '../components/Employments';
 import { Box } from 'gestalt';
 
@@ -33,6 +33,7 @@ function Education({ dates, name, programName, url }) {
 }
 
 function Resume() {
+  // TODO: Add a download link for a pdf of my resume?
   return (
     <Layout
       headerLinks={[navLinks.contact, navLinks.home]}
