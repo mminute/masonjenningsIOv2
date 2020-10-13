@@ -1,28 +1,7 @@
 import React, { Fragment } from 'react';
 import SearchFilterSelect from './SearchFilterSelect';
+import Pill from './Pill';
 import { Box, Divider, IconButton, SearchField, SelectList } from 'gestalt';
-
-function TagPill({ onClick, tag }) {
-  return (
-    <Box
-      color="darkWash"
-      direction="row"
-      display="flex"
-      padding={2}
-      rounding="pill"
-      marginEnd={1}
-    >
-      <i>{tag}</i>
-
-      <IconButton
-        accessibilityLabel={`Remove ${tag}`}
-        icon="clear"
-        size="xs"
-        onClick={() => onClick(tag)}
-      />
-    </Box>
-  );
-}
 
 export default function Controls(props) {
   const {
@@ -75,7 +54,13 @@ export default function Controls(props) {
       {selectedTags && (
         <Box direction="row" display="flex" paddingY={2} wrap>
           {selectedTags.map(tag => (
-            <TagPill key={`selected-${tag}`} onClick={onRemoveTag} tag={tag} />
+            <Pill
+              key={`selected-${tag}`}
+              id={tag}
+              icon="clear"
+              onClick={onRemoveTag}
+              text={tag}
+            />
           ))}
         </Box>
       )}
@@ -93,13 +78,11 @@ export default function Controls(props) {
           <Box flex="grow">
             <Box display="flex" direction="row" alignItems="center">
               {`${bookCount} books`}
-              
+
               <Box paddingX={1}>
                 <IconButton
                   accessibilityLabel={
-                    density
-                      ? 'Change to regular view'
-                      : 'Change to dense view'
+                    density ? 'Change to regular view' : 'Change to dense view'
                   }
                   icon={density ? 'view-type-default' : 'view-type-dense'}
                   onClick={setDensity}

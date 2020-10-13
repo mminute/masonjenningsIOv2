@@ -1,3 +1,3 @@
-import BooksReadPage from '../../../components/Books/BooksReadPage';
+import BooksReadPage from '../../../components/Books/BooksRead/BooksReadPage';
 
 export default BooksReadPage;

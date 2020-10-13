@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Book from './Book';
-import booksReadData from '../../DATA/booksRead';
+import booksReadData from '../../../DATA/booksRead';
 import Controls from './Controls';
 import FiltersPanel from './FiltersPanel';
-import MoreAboutLayout from '../MoreAboutLayout';
+import MoreAboutLayout from '../../MoreAboutLayout';
+import Summary from './Summary';
 import { filterBySearch, sortBy } from './dataUtils';
-import { Box } from 'gestalt';
+import { Box, TapArea } from 'gestalt';
 
 const tags = Array.from(
   new Set(
@@ -16,13 +17,14 @@ const tags = Array.from(
 ).sort();
 
 export default function BooksReadPage() {
+  const [density, setDensity] = useState(false);
+  const [searchFilter, setSearchFilter] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedTags, setSelectedTags] = useState([]);
+  const [showFiltersPanel, setShowFiltersPanel] = useState(false);
+  const [showSummary, setShowSummary] = useState(true); // TODO: set to false
   const [sort, setSort] = useState('date');
   const [sortOrder, setSortOder] = useState('ascending');
-  const [showFiltersPanel, setShowFiltersPanel] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [searchFilter, setSearchFilter] = useState('all');
-  const [selectedTags, setSelectedTags] = useState([]);
-  const [density, setDensity] = useState(false);
 
   const handleFiltersPanelUpdate = data => {
     setSearchTerm(data.searchTerm);
@@ -48,7 +50,18 @@ export default function BooksReadPage() {
   }).sort(sortBy(sort, sortOrder));
 
   return (
-    <MoreAboutLayout title="Books I've Read">
+    <MoreAboutLayout
+      title="Books I've Read"
+      subTitle={
+        <Box marginStart={12} marginBottom={-4}>
+          <div className="inconsolata gray textHeight-regular">
+            <TapArea onTap={() => setShowSummary(true)}>
+              <h3>See a summary</h3>
+            </TapArea>
+          </div>
+        </Box>
+      }
+    >
       <div className="inconsolata gray textHeight-regular">
         <Controls
           bookCount={filteredAndSorted.length}
@@ -74,11 +87,7 @@ export default function BooksReadPage() {
             padding={3}
             rounding={6}
           >
-            <Book
-              data={bookData}
-              density={density}
-              onAddTag={handleAddTag}
-            />
+            <Book data={bookData} density={density} onAddTag={handleAddTag} />
           </Box>
         ))}
 
@@ -90,6 +99,13 @@ export default function BooksReadPage() {
             selectedTags={selectedTags}
             setShowSheet={setShowFiltersPanel}
             tags={tags}
+          />
+        )}
+
+        {showSummary && (
+          <Summary
+            data={booksReadData}
+            onDismiss={() => setShowSummary(false)}
           />
         )}
       </div>
