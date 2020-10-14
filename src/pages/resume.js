@@ -2,8 +2,13 @@ import React from 'react';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
 import navLinks from '../DATA/navLinks';
-import { AlphaSights, Pinterest, RamlaBenaisa } from '../components/Employments';
-import { Box } from 'gestalt';
+import {
+  AlphaSights,
+  Pinterest,
+  RamlaBenaisa,
+} from '../components/Employments';
+import { useStaticQuery, graphql } from 'gatsby';
+import { Box, IconButton } from 'gestalt';
 
 function Section({ children, title }) {
   return (
@@ -25,7 +30,8 @@ function Education({ dates, name, programName, url }) {
   return (
     <div className="inconsolata textSize-regular textHeight-regular">
       <Box marginBottom={3}>
-        {name}, {dates}<br />
+        {name}, {dates}
+        <br />
         <a href={url}>{programName}</a>
       </Box>
     </div>
@@ -33,14 +39,34 @@ function Education({ dates, name, programName, url }) {
 }
 
 function Resume() {
-  // TODO: Add a download link for a pdf of my resume?
+  const data = useStaticQuery(graphql`
+    {
+      allFile(filter: { extension: { eq: "pdf" } }) {
+        edges {
+          node {
+            publicURL
+            name
+          }
+        }
+      }
+    }
+  `);
+
+  const pdf = data.allFile.edges.find(file => file.node.name === 'resume');
+
   return (
-    <Layout
-      headerLinks={[navLinks.contact, navLinks.home]}
-      stickyHeader
-    >
+    <Layout headerLinks={[navLinks.contact, navLinks.home]} stickyHeader>
       <SEO title="Resume" />
       <div className="container">
+        <div style={{ position: 'fixed', right: '50px' }}>
+          <a href={pdf.node.publicURL} download>
+            <IconButton
+              accessibilityLabel="Download resume"
+              icon="download"
+              size="lg"
+            />
+          </a>
+        </div>
         <Section title="EMPLOYMENT">
           <Box display="flex" marginTop={4} wrap>
             <Pinterest />

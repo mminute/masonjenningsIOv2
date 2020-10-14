@@ -1,11 +1,10 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import styles from './styles';
 
 const linkStyles = {
   textDecoration: 'none',
-  fontSize: styles.fontSize,
-  color: styles.fontColor,
+  fontSize: '16px',
+  color: '#111',
 };
 
 function makeGatsbyLink({ to, txt, styleOverrides }) {
@@ -16,20 +15,38 @@ function makeGatsbyLink({ to, txt, styleOverrides }) {
   );
 }
 
+// Only the first navigation to an id was working
+// This hack forces the window to scroll to the id
+const scrollTo = id => {
+  if (id.match(/^#/)) {
+    const el = document.querySelector(id);
+
+    if (el) {
+      return window.scrollTo(0, el.offsetTop - 20);
+    }
+  }
+};
+
 function makeLink({ to, txt, styleOverrides }) {
   return (
-    <a href={to} style={{ ...linkStyles, ...styleOverrides }}>
+    <a
+      href={to}
+      style={{ ...linkStyles, ...styleOverrides }}
+      onClick={() => scrollTo(to)}
+    >
       {txt}
     </a>
   );
 }
 
-function LinkComponent({
-  font, gatsbyLink, styleOverrides, to, txt,
-}) {
+function LinkComponent({ font, gatsbyLink, styleOverrides, to, txt }) {
   const makeFn = gatsbyLink ? makeGatsbyLink : makeLink;
 
-  return <div className={font || 'montserrat'}>{makeFn({ to, txt, styleOverrides })}</div>;
+  return (
+    <div className={font || 'montserrat'}>
+      {makeFn({ to, txt, styleOverrides })}
+    </div>
+  );
 }
 
 export default LinkComponent;
