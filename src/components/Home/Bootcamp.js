@@ -37,13 +37,6 @@ function LabeledCountTo({ label, suffix, to }) {
   );
 }
 
-// TODO: Use real styles
-const textStyles = {
-  color: 'white',
-  display: 'flex',
-  justifyContent: 'center',
-};
-
 export default function Bootcamp() {
   const counterRef = useRef();
   const [showCounters, setShowCounters] = useState(false);
@@ -118,8 +111,10 @@ export default function Bootcamp() {
                   <h2
                     className="montserrat"
                     style={{
-                      ...textStyles,
+                      color: 'white',
+                      display: 'flex',
                       fontSize: '30px',
+                      justifyContent: 'center',
                     }}
                   >
                     THE FLATIRON WAY

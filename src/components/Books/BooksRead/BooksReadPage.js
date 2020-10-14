@@ -22,7 +22,7 @@ export default function BooksReadPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTags, setSelectedTags] = useState([]);
   const [showFiltersPanel, setShowFiltersPanel] = useState(false);
-  const [showSummary, setShowSummary] = useState(true); // TODO: set to false
+  const [showSummary, setShowSummary] = useState(false);
   const [sort, setSort] = useState('date');
   const [sortOrder, setSortOder] = useState('ascending');
 

@@ -14,7 +14,7 @@ export function MasonJenningsIO() {
   const myWebsiteDescription = (
     <Fragment>
       <P styles={{ marginTop: '0px' }}>
-        <a href="http://proveitapp.herokuapp.com/" target="_blank">MASONJENNINGS.IO</a> THIS WEBSITE!
+        MASONJENNINGS.IO - THIS WEBSITE!
       </P>
 
       <P>

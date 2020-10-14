@@ -53,7 +53,6 @@ function IndexPage() {
   }, []);
 
   const headerLinks = [
-    // TODO: id links not working
     { to: '#about-me', txt: 'About Me' },
     { to: '#my-languages', txt: 'Languages' },
     { to: '#my-projects', txt: 'Projects' },
@@ -77,10 +76,17 @@ function IndexPage() {
       >
         <EniacHeroModule />
       </div>
+
+      <div id="about-me" />
       <Section>
         <div ref={contentRef} className="container">
           <About paddingTop={parallaxRef.current?.clientHeight / 6 || 0} />
         </div>
+        {/*
+          This looks weird but it keeps the header from obscuring the language
+          content when you navigate to the id
+        */}
+        <div id="my-languages" />
       </Section>
 
       <Section>
@@ -91,6 +97,11 @@ function IndexPage() {
 
       <Section>
         <Bootcamp />
+        {/*
+          This looks weird but it keeps the header from obscuring the Projects
+          content when you navigate to the id
+        */}
+        <div id="my-projects" />
       </Section>
 
       <Section>

@@ -21,6 +21,10 @@
 	display:inline-block;
 }
 
+/* .icon-download:before {
+	content: "\e04d";
+} */
+
 .icon-linkedin:before {
 	content: "\e062";
 }
@@ -32,8 +36,6 @@
 .icon-twitter:before {
 	content: "\e05e";
 }
-
-/* TODO: delete unused */
 
 .icon-puzzle:before {
 	content: "\e026";
@@ -59,59 +61,12 @@
 	content: "\e02a";
 }
 
-.icon-lightbulb:before {
-	content: "\e030";
-}
-
 .icon-tools-2:before {
 	content: "\e034";
 }
 
 .icon-genius:before {
 	content: "\e046";
-}
-
-.icon-chat:before {
-	content: "\e049";
-}
-
-.icon-cloud:before {
-	content: "\e04b";
-}
-
-.icon-upload:before {
-	content: "\e04c";
-}
-.icon-download:before {
-	content: "\e04d";
-}
-
-.icon-hazardous:before {
-	content: "\e04f";
-}
-
-.icon-speedometer:before {
-	content: "\e051";
-}
-
-.icon-compass:before {
-	content: "\e053";
-}
-
-.icon-clock:before {
-	content: "\e055";
-}
-
-.icon-aperture:before {
-	content: "\e056";
-}
-
-.icon-quote:before {
-	content: "\e057";
-}
-
-.icon-alarmclock:before {
-	content: "\e059";
 }
 
 .icon-strategy:before {

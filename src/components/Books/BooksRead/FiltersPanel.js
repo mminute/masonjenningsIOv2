@@ -40,8 +40,6 @@ function PanelContents(props) {
     tags,
   } = props;
 
-  // TODO: Date filter?
-
   const [searchFilter, setSearchFilter] = useState(currentSearchFilter);
   const [searchTerm, setSearchTerm] = useState(currentSearchTerm);
   const [localSelectedTags, setLocalSelectedTags] = useState(selectedTags);
