@@ -1,15 +1,16 @@
 import React from 'react';
 import MoreAboutLayout from '../../MoreAboutLayout';
 import booksToReadData from '../../../DATA/booksToRead';
-import { Box } from 'gestalt';
+import Tags from '../Tags';
+import { Box, Stack } from 'gestalt';
 
-function MaybeLink({ link, text }) {
+function MaybeLink({ children, link }) {
   return link ? (
     <a href={link} target="_blank">
-      {text}
+      {children}
     </a>
   ) : (
-    text
+    children
   );
 }
 
@@ -30,7 +31,20 @@ export default function BooksToReadPage() {
             rounding={6}
           >
             <Box marginStart={5}>
-              <b><MaybeLink link={bk.link} text={bk.title} /></b> by {bk.author}
+              <Stack>
+                <Box>
+                  <b>
+                    <MaybeLink link={bk.link}>{bk.title}</MaybeLink>
+                  </b>{' '}
+                  by {bk.author}
+                </Box>
+
+                {bk.tags?.length && (
+                  <Box marginStart={3}>
+                    <Tags onTap={() => {}} tags={['hello', 'world']} />
+                  </Box>
+                )}
+              </Stack>
             </Box>
           </Box>
         ))}
