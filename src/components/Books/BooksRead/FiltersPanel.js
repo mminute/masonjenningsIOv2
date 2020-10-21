@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-import SearchFilterSelect from './SearchFilterSelect';
+import booksReadData from '../../../DATA/booksRead';
+import SearchFilterSelect from '../SearchFilterSelect';
 import {
   Box,
   Button,
@@ -12,6 +13,14 @@ import {
   SearchField,
   Sheet,
 } from 'gestalt';
+
+const tags = Array.from(
+  new Set(
+    booksReadData.reduce((accumulator, book) => {
+      return [...accumulator, ...book.tags];
+    }, [])
+  )
+).sort();
 
 function Tag(props) {
   const { checked, onChange, text } = props;
@@ -37,7 +46,6 @@ function PanelContents(props) {
     currentSearchTerm,
     dataRef,
     selectedTags,
-    tags,
   } = props;
 
   const [searchFilter, setSearchFilter] = useState(currentSearchFilter);

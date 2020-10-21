@@ -44,11 +44,13 @@ export default function Controls(props) {
           setSearchFilter={setSearchFilter}
         />
 
-        <IconButton
-          accessibilityLabel="Filters"
-          icon="filter"
-          onClick={() => setShowFiltersPanel(current => !current)}
-        />
+        {setShowFiltersPanel && (
+          <IconButton
+            accessibilityLabel="Filters"
+            icon="filter"
+            onClick={() => setShowFiltersPanel(current => !current)}
+          />
+        )}
       </Box>
 
       {selectedTags && (
@@ -79,17 +81,19 @@ export default function Controls(props) {
             <Box display="flex" direction="row" alignItems="center">
               {`${bookCount} books`}
 
-              <Box paddingX={1}>
-                <IconButton
-                  accessibilityLabel={
-                    density ? 'Change to regular view' : 'Change to dense view'
-                  }
-                  icon={density ? 'view-type-default' : 'view-type-dense'}
-                  onClick={setDensity}
-                  size="sm"
-                  bgColor="lightGray"
-                />
-              </Box>
+              {setDensity && (
+                <Box paddingX={1}>
+                  <IconButton
+                    accessibilityLabel={
+                      density ? 'Change to regular view' : 'Change to dense view'
+                    }
+                    icon={density ? 'view-type-default' : 'view-type-dense'}
+                    onClick={setDensity}
+                    size="sm"
+                    bgColor="lightGray"
+                  />
+                </Box>
+              )}
             </Box>
           </Box>
         </Box>
