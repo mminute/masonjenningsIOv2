@@ -16,7 +16,7 @@ function matchTitle(book, searchTerm) {
 }
 
 function matchSearchTags(book, searchTerm) {
-  return book.tags.join(',').toLowerCase().match(searchTerm);
+  return book.tags?.join(',').toLowerCase().match(searchTerm);
 }
 
 function matchTagList(book, selectedTags) {

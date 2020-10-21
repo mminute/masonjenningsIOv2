@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Tags from '../Tags';
 import { Box, Icon, IconButton, Row, Stack, TapArea, Tooltip } from 'gestalt';
 
 function Review({ rating }) {
@@ -19,26 +20,6 @@ function Note({ text }) {
         </Box>
       </Box>
     </Tooltip>
-  );
-}
-
-function Tags({ bookTagKey, tags, onAddTag }) {
-  return (
-    <Row>
-      tags:
-      <Box marginStart={1}>
-        {tags.map((t, idx) => (
-          <Box key={`${bookTagKey}-${t}`} display="inlineBlock" marginEnd={2}>
-            <Row>
-              <TapArea onTap={() => onAddTag(t)}>
-                <i>{t}</i>
-              </TapArea>
-              {tags.length > 1 && idx !== tags.length - 1 && ','}
-            </Row>
-          </Box>
-        ))}
-      </Box>
-    </Row>
   );
 }
 
@@ -106,7 +87,7 @@ function BookDense({ data, onAddTag }) {
             <Tags
               bookTagKey={`${title}-${date}`}
               tags={tags}
-              onAddTag={onAddTag}
+              onTap={onAddTag}
             />
             {notes && <Note text={notes} />}
             <Links
@@ -145,7 +126,7 @@ function BookDefault({ data, onAddTag }) {
 
               <Tags
                 bookTagKey={`${title}-${date}`}
-                onAddTag={onAddTag}
+                onTap={onAddTag}
                 tags={tags}
               />
 
