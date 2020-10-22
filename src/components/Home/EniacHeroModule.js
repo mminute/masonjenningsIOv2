@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import BackgroundImage from 'gatsby-background-image';
 import { graphql, StaticQuery } from 'gatsby';
 import { Box } from 'gestalt';
@@ -20,6 +20,11 @@ const textStyles = {
 };
 
 function EniacHeroModule() {
+  let height = 0;
+  if (typeof window !== 'undefined') {
+    height = window.innerHeight;
+  }
+
   return (
     <StaticQuery
       query={graphql`
@@ -42,7 +47,7 @@ function EniacHeroModule() {
             fluid={imageData}
             Tag="section"
             style={{
-              height: `${window.innerHeight}px`,
+              height: `${height}px`,
               backgroundColor: 'rgba(0, 0, 0, 0.3)',
             }}
           >

@@ -13,6 +13,11 @@ const textStyles = {
 };
 
 function Thanks() {
+  let height = 0;
+  if (typeof window !== 'undefined') {
+    height = window.innerHeight;
+  }
+
   return (
     <Layout headerLinks={[navLinks.home]}>
       <SEO title="Thanks" />
@@ -37,7 +42,7 @@ function Thanks() {
               fluid={imageData}
               Tag="section"
               style={{
-                height: `${window.innerHeight}px`,
+                height: `${height}px`,
                 backgroundColor: 'rgba(0, 0, 0, 0.3)',
               }}
             >
