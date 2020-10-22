@@ -11,3 +11,15 @@
   z-index: 1;
   width: 100%;
 }
+
+@media (max-width: 950px) {
+  .desktopHeader {
+    display: none;
+  }
+}
+
+@media (min-width: 950px) {
+  .mobileHeader {
+    display: none;
+  }
+}

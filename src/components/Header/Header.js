@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Box, Row } from 'gestalt';
+import { Box, Divider, IconButton, Row, Stack, TapArea } from 'gestalt';
 import Link from '../Link';
 import 'gestalt/dist/gestalt.css';
 import './Header.css';
@@ -9,6 +9,7 @@ import './Header.css';
 function Header({ headerLinks, siteTitle, stickyHeader }) {
   const [opacity, setOpacity] = useState(0);
   const [scrolled, setScrolled] = useState(false);
+  const [showMobileLinks, setShowMobileLinks] = useState(false);
   const headerRef = useRef();
 
   useEffect(() => {
@@ -59,7 +60,7 @@ function Header({ headerLinks, siteTitle, stickyHeader }) {
 
   return (
     <header
-      className={`${stickyHeader ? 'stickyHeader' : 'fixedHeader'}`}
+      className={`${stickyHeader ? 'stickyHeader' : 'fixedHeader'} montserrat`}
       style={{
         ...(scrolled || stickyHeader
           ? { boxShadow: '0px 1px 0px 0px #f5f5f5' }
@@ -70,37 +71,92 @@ function Header({ headerLinks, siteTitle, stickyHeader }) {
       }}
       ref={headerRef}
     >
-      <Box display="flex" alignItems="baseline" paddingX={12}>
-        <h1
-          style={{
-            fontSize: '28px',
-            paddingBottom: '4px',
-            paddingLeft: '4px',
-            paddingRight: '4px',
-            ...linkStyles,
-          }}
-        >
-          <GatsbyLink
-            to="/"
-            style={{ textDecoration: 'none', color: '#111', ...linkStyles }}
+      {/* desktopHeader is display: none below 950px window width */}
+      <div className="desktopHeader">
+        <Box display="flex" alignItems="baseline" paddingX={12}>
+          <h1
+            style={{
+              fontSize: '28px',
+              paddingBottom: '4px',
+              paddingLeft: '4px',
+              paddingRight: '4px',
+              ...linkStyles,
+            }}
           >
-            <div
-              className="montserrat"
-              styles={{
-                paddingBottom: '4px',
-                paddingLeft: '4px',
-                paddingRight: '4px',
-                ...linkStyles,
-              }}
+            <GatsbyLink
+              to="/"
+              style={{ textDecoration: 'none', color: '#111', ...linkStyles }}
+            >
+              <div
+                styles={{
+                  paddingBottom: '4px',
+                  paddingLeft: '4px',
+                  paddingRight: '4px',
+                  ...linkStyles,
+                }}
+              >
+                {siteTitle}
+              </div>
+            </GatsbyLink>
+          </h1>
+          <Box display="flex" direction="row" flex="grow" justifyContent="end">
+            <Row gap={2}>{links}</Row>
+          </Box>
+        </Box>
+      </div>
+
+      {/* mobileHeader is display: none above 950px window width */}
+      <div className="mobileHeader">
+        <Box
+          alignItems="baseline"
+          color="white"
+          display="flex"
+          justifyContent="between"
+          width="100%"
+          paddingY={1}
+        >
+          <Box marginStart={4}>
+            <GatsbyLink
+              to="/"
+              style={{ textDecoration: 'none', color: '#111' }}
             >
               {siteTitle}
-            </div>
-          </GatsbyLink>
-        </h1>
-        <Box display="flex" direction="row" flex="grow" justifyContent="end">
-          <Row gap={2}>{links}</Row>
+            </GatsbyLink>
+          </Box>
+          <IconButton
+            accessibilityLabel="Page navigation"
+            icon="menu"
+            onClick={() => setShowMobileLinks(current => !current)}
+          />
         </Box>
-      </Box>
+
+        {showMobileLinks && (
+          <Box
+            color="white"
+            direction="column"
+            display="flex"
+            width="100%"
+          >
+            <Divider />
+            <Box marginBottom={2}>
+              <Stack alignItems="end">
+                {headerLinks.map((linkInfo, idx) => (
+                  <Box paddingY={2} paddingX={4}>
+                    <TapArea onTap={() => setShowMobileLinks(false)}>
+                      <Link
+                        key={`mobile-nav-link-${idx}`}
+                        gatsbyLink={linkInfo.gatsbyLink}
+                        to={linkInfo.to}
+                        txt={linkInfo.txt}
+                      />
+                    </TapArea>
+                  </Box>
+                ))}
+              </Stack>
+            </Box>
+          </Box>
+        )}
+      </div>
     </header>
   );
 }
