@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box } from 'gestalt';
 import '../../styles/et-line-font.css';
+import './Languages.css';
 
 const nodeText = 'Build server applications in JS too!';
 const reactText = 'Building delightfully interactive user interfaces in JS.';
@@ -40,7 +41,7 @@ export default function Languages() {
       <Box display="flex" justifyContent="center" column={6} margin="auto">
         <Box>
           <Box display="flex" justifyContent="center">
-            <h1 className="montserrat" style={{ display: 'block', fontSize: '30px' }}>LANGUAGES/FRAMEWORKS</h1>
+            <h1 className="montserrat languageSectionTitle" style={{ display: 'block' }}>LANGUAGES/FRAMEWORKS</h1>
           </Box>
           <div className="inconsolata textSize-regular gray" style={{ textAlign: 'center' }}>
             1, 2, 3, 4, 5... IF PROGRAMMING LAUNGUAGES COUNT THEN I GUESS I'M A POLYGOT?

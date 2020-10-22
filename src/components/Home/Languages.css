@@ -1,0 +1,11 @@
+@media (min-width: 600px) {
+  .languageSectionTitle {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 599px) {
+  .languageSectionTitle {
+    font-size: 18px;
+  }
+}
