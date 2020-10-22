@@ -6,7 +6,7 @@ import Link from '../Link';
 import 'gestalt/dist/gestalt.css';
 import './Header.css';
 
-function Header({ headerLinks, siteTitle, stickyHeader }) {
+function Header({ headerLinks, stickyHeader }) {
   const [opacity, setOpacity] = useState(0);
   const [scrolled, setScrolled] = useState(false);
   const [showMobileLinks, setShowMobileLinks] = useState(false);
@@ -95,7 +95,7 @@ function Header({ headerLinks, siteTitle, stickyHeader }) {
                   ...linkStyles,
                 }}
               >
-                {siteTitle}
+                Mason Jennings
               </div>
             </GatsbyLink>
           </h1>
@@ -120,7 +120,7 @@ function Header({ headerLinks, siteTitle, stickyHeader }) {
               to="/"
               style={{ textDecoration: 'none', color: '#111' }}
             >
-              {siteTitle}
+              Mason Jennings
             </GatsbyLink>
           </Box>
           <IconButton
@@ -160,13 +160,5 @@ function Header({ headerLinks, siteTitle, stickyHeader }) {
     </header>
   );
 }
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: '',
-};
 
 export default Header;

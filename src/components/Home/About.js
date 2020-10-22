@@ -38,7 +38,7 @@ export default function About({ paddingTop }) {
 
         <Box smColumn={12} mdColumn={4} marginStart={2} marginBottom="auto" marginTop="auto">
           <Mask rounding={3}>
-            <Image fileName={'mason_jennings_pic.jpg'} />
+            <Image fileName="mason_jennings_pic.jpg" />
           </Mask>
         </Box>
       </Box>
