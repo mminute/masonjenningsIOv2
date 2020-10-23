@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import About from '../components/Home/About';
 import Projects from '../components/Home/Projects/Projects';
 import EniacHeroModule from '../components/Home/EniacHeroModule';
@@ -29,6 +29,13 @@ function Section({ children }) {
 function IndexPage() {
   const parallaxRef = useRef();
   const contentRef = useRef();
+  const [padding, setPadding] = useState(1000);
+
+  useEffect(() => {
+    setPadding(parallaxRef.current?.clientHeight / 6)
+  }, [parallaxRef.current]);
+
+  console.log(padding);
 
   function handleScroll() {
     // https://stackoverflow.com/questions/29725828/update-style-of-a-component-onscroll-in-react-js
@@ -80,7 +87,7 @@ function IndexPage() {
       <div id="about-me" />
       <Section>
         <div ref={contentRef} className="container">
-          <About paddingTop={parallaxRef.current?.clientHeight / 6 || 0} />
+          <About paddingTop={padding} />
         </div>
         {/*
           This looks weird but it keeps the header from obscuring the language
