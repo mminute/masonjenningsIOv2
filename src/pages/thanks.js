@@ -21,8 +21,14 @@ class Thanks extends Component {
   render() {
     const { height } = this.state;
 
+    const moreAboutMe = {
+      to: '/moreAbout/me/',
+      txt: 'About Me',
+      gatsbyLink: true,
+    }
+
     return (
-      <Layout headerLinks={[navLinks.home]}>
+      <Layout headerLinks={[moreAboutMe, navLinks.resume, navLinks.home]}>
         <SEO title="Thanks" />
         <div
           className="eniacHeroBackground"

@@ -4,10 +4,12 @@ import SEO from '../components/seo';
 import navLinks from '../DATA/navLinks';
 
 const NotFoundPage = () => (
-  <Layout headerLinks={[navLinks.contact, navLinks.home]}>
+  <Layout headerLinks={[navLinks.contact, navLinks.home]} stickyHeader stickyFooter>
     <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <div className="container montserrat">
+      <h1>Whoops!</h1>
+      <p>You've just hit a route that doesn&#39;t exist...</p>
+    </div>
   </Layout>
 );
 

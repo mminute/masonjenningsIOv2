@@ -7,7 +7,7 @@ import { Box } from 'gestalt';
 
 export default function Me() {
   return (
-    <MoreAboutLayout title="MORE ABOUT ME">
+    <MoreAboutLayout title="MORE ABOUT ME" excludeAboutMe>
       <Box marginStart={12}>
         <div className="inconsolata gray" style={{ fontSize: '18px' }}>
           For professional/semi-professional info you can check out my <Link to="/resume">resume</Link> and these links:

@@ -5,8 +5,14 @@ import navLinks from '../DATA/navLinks';
 import { Box } from 'gestalt';
 
 function Contact() {
+  const moreAboutMe = {
+    to: '/moreAbout/me/',
+    txt: 'About Me',
+    gatsbyLink: true,
+  }
+  
   return (
-    <Layout headerLinks={[navLinks.home]} stickyHeader stickyFooter>
+    <Layout headerLinks={[moreAboutMe, navLinks.resume, navLinks.home]} stickyHeader stickyFooter>
       <SEO title="Contact" />
       <div className="container">
         <Box marginTop={12} padding={6}>

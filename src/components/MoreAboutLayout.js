@@ -4,9 +4,14 @@ import SEO from './seo';
 import navLinks from '../DATA/navLinks';
 import { Box } from 'gestalt';
 
-export default function MoreAboutLayout({ children, title, subTitle }) {
+export default function MoreAboutLayout({ children, excludeAboutMe, title, subTitle }) {
+  const headerLinks = [navLinks.contact, navLinks.home];
+  if (!excludeAboutMe) {
+    headerLinks.unshift(navLinks.moreAboutMe);
+  }
+  
   return (
-    <Layout headerLinks={[navLinks.contact, navLinks.home]} stickyHeader>
+    <Layout headerLinks={headerLinks} stickyHeader>
       <SEO title={title} />
 
       <div className="container" style={{ marginBottom: '96px' }}>
