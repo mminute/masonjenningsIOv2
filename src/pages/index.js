@@ -35,8 +35,6 @@ function IndexPage() {
     setPadding(parallaxRef.current?.clientHeight / 6)
   }, [parallaxRef.current]);
 
-  console.log(padding);
-
   function handleScroll() {
     // https://stackoverflow.com/questions/29725828/update-style-of-a-component-onscroll-in-react-js
     // "I found that setState'ing inside scroll event for animation is choppy. I had to manually set the style of components using refs. – Ryan Rho May 13 '15 at 21:38"
