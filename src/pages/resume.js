@@ -54,8 +54,14 @@ function Resume() {
 
   const pdf = data.allFile.edges.find(file => file.node.name === 'resume');
 
+  const moreAboutMe = {
+    to: '/moreAbout/me/',
+    txt: 'About Me',
+    gatsbyLink: true,
+  }
+
   return (
-    <Layout headerLinks={[navLinks.contact, navLinks.home]} stickyHeader>
+    <Layout headerLinks={[moreAboutMe, navLinks.contact, navLinks.home]} stickyHeader>
       <SEO title="Resume" />
       <div className="container">
         <div style={{ position: 'fixed', right: '50px' }}>
