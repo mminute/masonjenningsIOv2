@@ -38,9 +38,6 @@ export default function About({ paddingTop }) {
 
         <Box smColumn={12} mdColumn={4} marginStart={2} marginBottom="auto" marginTop="auto">
           <Mask rounding={3}>
-          {/* /Users/masonjennings/code/masonjenningsIOv2/src/components/Home/About.js */}
-          {/* /Users/masonjennings/code/masonjenningsIOv2/src/images/00-eniac.jpg */}
-            {/* <img src="../../images/mason_jennings_pic.jpg" /> */}
             <Image fileName="mason_jennings_pic.jpg" />
           </Mask>
         </Box>
