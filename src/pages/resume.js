@@ -39,20 +39,20 @@ function Education({ dates, name, programName, url }) {
 }
 
 function Resume() {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     allFile(filter: { extension: { eq: "pdf" } }) {
-  //       edges {
-  //         node {
-  //           publicURL
-  //           name
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
+  const data = useStaticQuery(graphql`
+    {
+      allFile(filter: { extension: { eq: "pdf" } }) {
+        edges {
+          node {
+            publicURL
+            name
+          }
+        }
+      }
+    }
+  `);
 
-  // const pdf = data.allFile.edges.find(file => file.node.name === 'resume');
+  const pdf = data.allFile.edges.find(file => file.node.name === 'resume');
 
   const moreAboutMe = {
     to: '/moreAbout/me/',
@@ -65,7 +65,7 @@ function Resume() {
       <SEO title="Resume" />
       <div className="container">
         <div style={{ position: 'fixed', right: '50px' }}>
-          <a href={'pdf.node.publicURL'} download>
+          <a href={pdf.node.publicURL} download>
             <IconButton
               accessibilityLabel="Download resume"
               icon="download"
