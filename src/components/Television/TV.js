@@ -24,18 +24,13 @@ const tabs = [
   { text: 'As an adult', href, id: 'adulthood' },
 ];
 
-const tabNames = tabs.map(tab => tab.id);
-
-function TV({ initialTab }) {
-  const [activeTabIndex, setActiveTabIndex] = useState(
-    (initialTab && tabNames.indexOf(initialTab)) || 0
-  );
-
+function TV() {
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
   const currentSelection = selections[activeTabIndex];
 
   const handleChangeTab = ({ activeTabIndex, event }) => {
     event.preventDefault();
-    window.scrollTo(0, 0);
+    window.scrollTo(0,0);
     setActiveTabIndex(activeTabIndex);
   };
 
@@ -94,7 +89,11 @@ function TV({ initialTab }) {
                   </Box>
                 </Sticky>
 
-                <Box display="flex" alignItems="center" justifyContent="center">
+                <Box
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                >
                   <div style={{ width: '100%' }}>
                     {items.map((tvShow, idx) => (
                       <Box
