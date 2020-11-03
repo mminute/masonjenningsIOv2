@@ -3,7 +3,7 @@ import BookPageController from '../BookPageController';
 import booksToReadData from '../../../DATA/booksToRead';
 import Controls from '../Controls';
 import MoreAboutLayout from '../../MoreAboutLayout';
-import Tags from '../Tags';
+import Tags from '../../Tags';
 import { Box, Stack } from 'gestalt';
 
 function MaybeLink({ children, link }) {
@@ -22,7 +22,6 @@ export default function BooksToReadPage() {
       <BookPageController data={booksToReadData}>
         {({
           books,
-          handleAddTag,
           handleRemoveTag,
           searchFilter,
           setSearchFilter,
@@ -68,10 +67,10 @@ export default function BooksToReadPage() {
                         </b>{' '}
                         by {bk.author}
                       </Box>
-      
+                      {/* TODO */}
                       {bk.tags?.length && (
                         <Box marginStart={3}>
-                          <Tags onTap={() => {}} tags={['hello', 'world']} />
+                          <Tags title="tags" onTap={() => {}} tags={['hello', 'world']} />
                         </Box>
                       )}
                     </Stack>

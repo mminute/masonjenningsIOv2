@@ -1,6 +1,6 @@
 import React from 'react';
-import Itm from '../../components/Itm';
-import MoreAboutLayout from '../../components/MoreAboutLayout';
+import Itm from '../../../components/Itm';
+import MoreAboutLayout from '../../../components/MoreAboutLayout';
 import { Box } from 'gestalt';
 import podcastList, {
   ABANDONED,
@@ -9,7 +9,7 @@ import podcastList, {
   STARTED_LISTENING,
   TO_CHECKOUT,
   USE_TO_LISTEN,
-} from '../../DATA/podcasts';
+} from '../../../DATA/podcasts';
 import 'gestalt/dist/gestalt.css';
 
 const categoryTitle = {

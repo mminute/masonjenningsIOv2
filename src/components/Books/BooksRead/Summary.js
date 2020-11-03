@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import Pill from '../Pill';
+import Pill from '../../Pill';
 import { summarize } from '../dataUtils';
 import {
   Box,

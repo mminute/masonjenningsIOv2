@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Tags from '../Tags';
-import { Box, Icon, IconButton, Row, Stack, TapArea, Tooltip } from 'gestalt';
+import Tags from '../../Tags';
+import { Box, Icon, IconButton, Row, Stack, Tooltip } from 'gestalt';
 
 function Review({ rating }) {
   return (
@@ -85,7 +85,8 @@ function BookDense({ data, onAddTag }) {
         <Box marginStart={12}>
           <Box marginStart={5}>
             <Tags
-              bookTagKey={`${title}-${date}`}
+              title="tags"
+              tagKey={`${title}-${date}`}
               tags={tags}
               onTap={onAddTag}
             />
@@ -125,7 +126,8 @@ function BookDefault({ data, onAddTag }) {
               <Box>by {author}</Box>
 
               <Tags
-                bookTagKey={`${title}-${date}`}
+                title="tags"
+                tagKey={`${title}-${date}`}
                 onTap={onAddTag}
                 tags={tags}
               />

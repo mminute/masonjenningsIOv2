@@ -1,20 +1,39 @@
 import React, { Fragment } from 'react';
-import SearchFilterSelect from './SearchFilterSelect';
 import Pill from '../Pill';
 import { Box, Divider, IconButton, SearchField, SelectList } from 'gestalt';
 
+function SearchFilterSelect(props) {
+  const {
+    searchFilter,
+    setSearchFilter,
+  } = props;
+
+  return (
+    <SelectList
+      id="searchFilter"
+      name="searchFilter"
+      onChange={({ value }) => setSearchFilter(value)}
+      options={[
+        { value: 'all', label: 'All' },
+        { value: 'title', label: 'Title' },
+        { value: 'genre', label: 'Genre' },
+        { value: 'actor', label: 'Actor' },
+      ]}
+      placeholder="Search filter"
+      value={searchFilter}
+    />
+  );
+}
+
 export default function Controls(props) {
   const {
-    bookCount,
-    density,
+    count,
     onRemoveTag,
     searchFilter,
     searchTerm,
     selectedTags,
-    setDensity,
     setSearchFilter,
     setSearchTerm,
-    setShowFiltersPanel,
     setSort,
     setSortOder,
     sort,
@@ -43,14 +62,6 @@ export default function Controls(props) {
           searchFilter={searchFilter}
           setSearchFilter={setSearchFilter}
         />
-
-        {setShowFiltersPanel && (
-          <IconButton
-            accessibilityLabel="Filters"
-            icon="filter"
-            onClick={() => setShowFiltersPanel(current => !current)}
-          />
-        )}
       </Box>
 
       {selectedTags && (
@@ -77,24 +88,8 @@ export default function Controls(props) {
         paddingY={2}
       >
         <Box flex="grow">
-          <Box flex="grow">
-            <Box display="flex" direction="row" alignItems="center">
-              {`${bookCount} books`}
-
-              {setDensity && (
-                <Box paddingX={1}>
-                  <IconButton
-                    accessibilityLabel={
-                      density ? 'Change to regular view' : 'Change to dense view'
-                    }
-                    icon={density ? 'view-type-default' : 'view-type-dense'}
-                    onClick={setDensity}
-                    size="sm"
-                    bgColor="lightGray"
-                  />
-                </Box>
-              )}
-            </Box>
+          <Box display="flex" direction="row" alignItems="center">
+            {`${count} shows`}
           </Box>
         </Box>
 
@@ -103,9 +98,9 @@ export default function Controls(props) {
           name="sort"
           onChange={({ value }) => setSort(value)}
           options={[
-            { value: 'date', label: 'Date' },
+            { value: 'firstAired', label: 'First aired' },
             { value: 'title', label: 'Title' },
-            { value: 'author', label: 'Author' },
+            { value: 'imdbRating', label: 'IMDb rating' },
           ]}
           placeholder="Sort By"
           value={sort}

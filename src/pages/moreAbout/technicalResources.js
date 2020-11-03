@@ -384,11 +384,11 @@ function TechnicalResources() {
         <Section title="Books">
           <ul>
             <Itm>
-              <a href="https://www.amazon.com/Zero-Bugs-Program-Faster-Thompson/dp/0996193308/ref=sr_1_1?dchild=1&keywords=Zero+Bugs+and+Program+Faster&qid=1588629339&sr=8-1" target="_blank">Zero Bugs and Program Faster</a> by Kate Thompson (ISBN: 9780996193306) - <Link to="/moreAbout/books/zeroBugsAndProgramFaster">Notes</Link>
+              <a href="https://www.amazon.com/Zero-Bugs-Program-Faster-Thompson/dp/0996193308/ref=sr_1_1?dchild=1&keywords=Zero+Bugs+and+Program+Faster&qid=1588629339&sr=8-1" target="_blank">Zero Bugs and Program Faster</a> by Kate Thompson (ISBN: 9780996193306) - <Link to="/moreAbout/media/books/zeroBugsAndProgramFaster">Notes</Link>
             </Itm>
 
             <Itm>
-              <a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X" target="_blank">The Pragmatic Programmer: From Journeyman to Master</a> by Andrew Hunt and David Thomas (ISBN: 0-201-61622-X) - <Link to="/moreAbout/books/pragmaticProgrammer">Notes</Link>
+              <a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X" target="_blank">The Pragmatic Programmer: From Journeyman to Master</a> by Andrew Hunt and David Thomas (ISBN: 0-201-61622-X) - <Link to="/moreAbout/media/books/pragmaticProgrammer">Notes</Link>
             </Itm>
           </ul>
         </Section>

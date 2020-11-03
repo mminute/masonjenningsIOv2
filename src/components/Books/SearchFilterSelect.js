@@ -1,7 +1,7 @@
 import React from 'react';
 import { SelectList } from 'gestalt';
 
-export default function Controls(props) {
+export default function SearchFilterSelect(props) {
   const {
     searchFilter,
     setSearchFilter,
