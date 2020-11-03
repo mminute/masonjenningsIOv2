@@ -30,18 +30,31 @@ export default function Me() {
         <Box marginStart={12}>
           <div className="inconsolata gray">
             <p>
-              Maybe you'd like to hear about <Link to="/moreAbout/podcasts">podcasts I'm listening to</Link>?
+              Maybe you'd like to hear about <Link to="/moreAbout/media/podcasts">podcasts I'm listening to</Link>?
             </p>
 
             <div>
               Or see a list of all the books:
               <ul style={{ listStyle: 'none' }}>
                 <li style={{ marginBottom: '8px' }}>
-                  + <Link to="/moreAbout/books/read">I've read</Link>
+                  + <Link to="/moreAbout/media/books/read">I've read</Link>
                 </li>
 
                 <li>
-                  + <Link to="/moreAbout/books/toRead">I'd like to read</Link>
+                  + <Link to="/moreAbout/media/books/toRead">I'd like to read</Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              If visual media is more your thing here are lists of the:
+              <ul style={{ listStyle: 'none' }}>
+                <li>
+                  + <Link to="/moreAbout/media/tv">TV I've watched</Link>
+                </li>
+
+                <li>
+                  + [WIP]- Movies I've seen
                 </li>
               </ul>
             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { filterBySearch, sortBy } from './dataUtils';
 
 export default function BookPageController({ children, data }) {

@@ -44,7 +44,7 @@ export default function Languages() {
             <h1 className="montserrat languageSectionTitle" style={{ display: 'block' }}>LANGUAGES/FRAMEWORKS</h1>
           </Box>
           <div className="inconsolata textSize-regular gray" style={{ textAlign: 'center' }}>
-            1, 2, 3, 4, 5... IF PROGRAMMING LAUNGUAGES COUNT THEN I GUESS I'M A POLYGOT?
+            1, 2, 3, 4, 5... IF PROGRAMMING LAUNGUAGES COUNT THEN I GUESS I'M A POLYGLOT?
           </div>
         </Box>
       </Box>

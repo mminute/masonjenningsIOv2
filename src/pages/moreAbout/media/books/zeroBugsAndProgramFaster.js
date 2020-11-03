@@ -1,7 +1,7 @@
 import React from 'react';
-import MoreAboutLayout from '../../../components/MoreAboutLayout';
+import MoreAboutLayout from '../../../../components/MoreAboutLayout';
 import { Box } from 'gestalt';
-import Chapter from '../../../components/Chapter';
+import Chapter from '../../../../components/Chapter';
 
 function ZeroBugsAndProgramFaster() {
   return (

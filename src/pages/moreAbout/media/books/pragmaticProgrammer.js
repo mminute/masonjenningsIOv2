@@ -1,7 +1,7 @@
 import React from 'react';
-import Chapter from '../../../components/Chapter';
-import Image from '../../../components/Image';
-import MoreAboutLayout from '../../../components/MoreAboutLayout';
+import Chapter from '../../../../components/Chapter';
+import Image from '../../../../components/Image';
+import MoreAboutLayout from '../../../../components/MoreAboutLayout';
 import { Box } from 'gestalt';
 
 function Chapter0() {

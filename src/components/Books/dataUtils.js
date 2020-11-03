@@ -39,22 +39,24 @@ export function filterBySearch({
     let title = false;
     let tagList = true;
 
+    const cleanSearchTerm = searchTerm.replace(/^(\/|\\)/, '');
+
     if (searchFilter === 'author') {
-      author = matchAuthor(book, searchTerm);
+      author = matchAuthor(book, cleanSearchTerm);
     }
 
     if (searchFilter === 'title') {
-      title = matchTitle(book, searchTerm);
+      title = matchTitle(book, cleanSearchTerm);
     }
 
     if (searchFilter === 'tags') {
-      searchTags = matchSearchTags(book, searchTerm);
+      searchTags = matchSearchTags(book, cleanSearchTerm);
     }
 
     if (searchFilter === 'all') {
-      author = matchAuthor(book, searchTerm);
-      title = matchTitle(book, searchTerm);
-      searchTags = matchSearchTags(book, searchTerm);
+      author = matchAuthor(book, cleanSearchTerm);
+      title = matchTitle(book, cleanSearchTerm);
+      searchTags = matchSearchTags(book, cleanSearchTerm);
     }
 
     if (selectedTags.length) {
