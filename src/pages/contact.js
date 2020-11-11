@@ -10,6 +10,24 @@ function Contact() {
     txt: 'About Me',
     gatsbyLink: true,
   }
+
+  const submitForm = (evt) => {
+    evt.preventDefault();
+    const form = evt.target;
+    const data = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        window.location.replace('/thanks');
+      } else {
+        window.alert('Sorry! Something went wrong');
+      }
+    };
+    xhr.send(data);
+  }
   
   return (
     <Layout headerLinks={[moreAboutMe, navLinks.resume, navLinks.home]} stickyHeader stickyFooter>
@@ -28,7 +46,11 @@ function Contact() {
         </Box>
 
         <div style={{ marginBottom: '50px', marginTop: '50px' }}>
-          <form action="//formspree.io/masonjennings.dev@gmail.com" method="POST">
+          <form
+            action="https://formspree.io/f/xgepzvgy"
+            method="POST"
+            onSubmit={submitForm}
+          >
             <Box display="flex" justifyContent="center">
               <Box display="flex" direction="column" column={6}>
                 <Box paddingY={2}>
