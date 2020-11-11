@@ -131,7 +131,7 @@ export default [
   {
     name: 'Reply All',
     url: 'https://gimletmedia.com/shows/reply-all',
-    category: SOMETIMES_LISTEN,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'Showcase',
@@ -186,12 +186,12 @@ export default [
   {
     name: 'Maintainers Anonymous',
     url: 'https://maintainersanonymous.com/',
-    category: STARTED_LISTENING,
+    category: ABANDONED,
   },
   {
     name: 'Teamistry',
     url: 'https://www.atlassian.com/podcast',
-    category: STARTED_LISTENING,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'Corona Virus Daily',
@@ -212,7 +212,7 @@ export default [
   {
     name: '30 Animals That Made Us Smarter',
     url: 'https://www.bbc.co.uk/programmes/w13xttw7/episodes/downloads',
-    category: STARTED_LISTENING,
+    category: ABANDONED,
   },
   {
     name: '50 Things That Made The Modern Ecomomy',
@@ -227,7 +227,7 @@ export default [
   {
     name: 'Car Stuff',
     url: 'https://www.iheart.com/podcast/carstuff-21122711/',
-    category: STARTED_LISTENING,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'Syntax - Tasty Web Development Treats',

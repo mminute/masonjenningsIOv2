@@ -344,6 +344,9 @@ function TechnicalResources() {
 
           <ul>
             <Itm>
+              <a href="https://blitzjs.com/" target="_blank">Blitz.js</a> Like Rails for JS/React
+            </Itm>
+            <Itm>
               <a href="https://github.com/humanwhocodes/momoa" target="_blank">Momoa JSON</a> parses JSON and creates an abstract syntax tree
             </Itm>
             <Itm>
