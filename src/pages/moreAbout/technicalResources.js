@@ -94,15 +94,15 @@ function TechnicalResources() {
         <Section title="Newsletters">
           <ul>
             <Itm>
-              <a href="https://twitter.com/cassidoo/" target="_blank">Cassidy Williams <span class="icon-twitter"></span></a> writes <a href="https://cassidoo.co/newsletter/" target="_blank">rendezvous with cassidoo</a> about all things web development.
+              <a href="https://twitter.com/cassidoo/" target="_blank">Cassidy Williams <span className="icon-twitter"></span></a> writes <a href="https://cassidoo.co/newsletter/" target="_blank">rendezvous with cassidoo</a> about all things web development.
             </Itm>
 
             <Itm>
-              <a href="https://maggieappleton.com/" target="_blank">Maggie Appleton</a> <a href="https://twitter.com/Mappletons" target="_blank"><span class="icon-twitter"></span></a> produces cool <a href="https://illustrated.dev/" target="_blank">sketchnotes</a> about web development and technology.
+              <a href="https://maggieappleton.com/" target="_blank">Maggie Appleton</a> <a href="https://twitter.com/Mappletons" target="_blank"><span className="icon-twitter"></span></a> produces cool <a href="https://illustrated.dev/" target="_blank">sketchnotes</a> about web development and technology.
             </Itm>
 
             <Itm>
-              <a href="https://twitter.com/slicknet/" target="_blank">Nicholas C. Zakas <span class="icon-twitter"></span></a> writes <a href="https://humanwhocodes.com/" target="_blank">Human who codes</a> about software engineering with a focus on JS.
+              <a href="https://twitter.com/slicknet/" target="_blank">Nicholas C. Zakas <span className="icon-twitter"></span></a> writes <a href="https://humanwhocodes.com/" target="_blank">Human who codes</a> about software engineering with a focus on JS.
             </Itm>
 
             <Itm>
@@ -302,15 +302,13 @@ function TechnicalResources() {
                 <a href="https://stackshare.io/stacks" target="_blank">"How I think about solving problems" - Human who codes</a>
               </p>
 
-              <p>
-                <ol>
-                  <Itm>Is this really a problem?</Itm>
-                  <Itm>Does the problem need to be solved?</Itm>
-                  <Itm>Does the problem need to be solved now?</Itm>
-                  <Itm>Does the problem need to be solved by me?</Itm>
-                  <Itm>Is there a simpler problem I can solve instead?</Itm>
-                </ol>
-              </p>
+              <ol>
+                <Itm>Is this really a problem?</Itm>
+                <Itm>Does the problem need to be solved?</Itm>
+                <Itm>Does the problem need to be solved now?</Itm>
+                <Itm>Does the problem need to be solved by me?</Itm>
+                <Itm>Is there a simpler problem I can solve instead?</Itm>
+              </ol>
 
               <p>I've seen versions of this list in the past, but thinking about this list in relation to concrete examples of software engineering was a good refresher.</p>
             </Itm>
@@ -343,6 +341,9 @@ function TechnicalResources() {
           <p>I haven't gone through all of these yet but they look good!</p>
 
           <ul>
+            <Itm>
+              <a href="https://swiperjs.com/demos" target="_blank">Swiper- Most Modern Mobile Touch Slider</a>
+            </Itm>
             <Itm>
               <a href="https://blitzjs.com/" target="_blank">Blitz.js</a> Like Rails for JS/React
             </Itm>
@@ -392,6 +393,10 @@ function TechnicalResources() {
 
             <Itm>
               <a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X" target="_blank">The Pragmatic Programmer: From Journeyman to Master</a> by Andrew Hunt and David Thomas (ISBN: 0-201-61622-X) - <Link to="/moreAbout/media/books/pragmaticProgrammer">Notes</Link>
+            </Itm>
+
+            <Itm>
+            <a href="https://www.amazon.com/Zero-One-Notes-Startups-Future-ebook/dp/B00J6YBOFQ/ref=sr_1_1?crid=VY553GJE9L24&dchild=1&keywords=from+zero+to+one&qid=1612753382&sprefix=from+zero+%2Caps%2C221&sr=8-1" target="_blank">Zero to One: Notes on Startups, or How to Build the Future</a> by Peter Thiel with Blake Masters (ISBN: 978-0-8041-3929-8) - <Link to="/moreAbout/media/books/zeroToOne">Notes</Link>
             </Itm>
           </ul>
         </Section>

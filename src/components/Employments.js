@@ -68,7 +68,8 @@ export function Pinterest() {
           </Box>
 
           <UL>
-            <LI>CORE PRODUCT: SHOPPING (07/2020 - PRESENT)</LI>
+            <LI>CORE PRODUCT: NATIVE PUBLISHING - ANDROID (03/2021 - PRESENT)</LI>
+            <LI>CORE PRODUCT: SHOPPING - WEB (07/2020 - 03/2021)</LI>
             <LI>CP: LEGO (11/2019 - 07/2020)</LI>
             <LI>CP: Core UI WEB (02/2018 - 11/2019)</LI>
             <LI>CP: CORE PALTFORM WEB (02/2018 - 11/2019)</LI>
@@ -80,6 +81,7 @@ export function Pinterest() {
           RESPONSIBILITIES & ACCOMPLISHMENTS
         </Box>
         <UL>
+          {/* TODO: ADD NATIVE PUBLISHING HERE */}
           <LI>FRONT-END ENGINEER DEVELOPING CORE USER FLOWS AND SHOPPING PRODUCTS</LI>
           <LI>ENSURED CONSISTENT REPRESENTATION OF CREATOR/ADVERTISER CONTENT</LI>
           <LI>MIGRATED PYTHON/DJANGO APP TO REACT</LI>
