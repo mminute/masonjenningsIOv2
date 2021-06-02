@@ -22,6 +22,7 @@ export default function BooksToReadPage() {
       <BookPageController data={booksToReadData}>
         {({
           books,
+          handleAddTag,
           handleRemoveTag,
           searchFilter,
           setSearchFilter,
@@ -67,10 +68,9 @@ export default function BooksToReadPage() {
                         </b>{' '}
                         by {bk.author}
                       </Box>
-                      {/* TODO */}
                       {bk.tags?.length && (
                         <Box marginStart={3}>
-                          <Tags title="tags" onTap={() => {}} tags={['hello', 'world']} />
+                          <Tags title="tags" onTap={handleAddTag} tags={bk.tags} />
                         </Box>
                       )}
                     </Stack>

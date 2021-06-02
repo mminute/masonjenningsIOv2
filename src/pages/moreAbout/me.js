@@ -59,6 +59,10 @@ export default function Me() {
               </ul>
             </div>
 
+            <div>
+              Do you like games? Well then, check out this <Link to="/moreAbout/media/games">list of some of the games I've played</Link>
+            </div>
+
             <p>
               Or read some of the <a href="https://trektrekgoose.wordpress.com/" target="_blank">blog I wrote that lovingly makes fun of Star Trek: TOS</a>?
             </p>

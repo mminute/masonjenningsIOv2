@@ -3,10 +3,19 @@ import Book from './Book';
 import BookPageController from '../BookPageController';
 import booksReadData from '../../../DATA/booksRead';
 import Controls from '../Controls';
-import FiltersPanel from './FiltersPanel';
+import FiltersPanel from '../../FiltersPanel';
 import MoreAboutLayout from '../../MoreAboutLayout';
+import SearchFilterSelect from '../SearchFilterSelect';
 import Summary from './Summary';
 import { Box, TapArea } from 'gestalt';
+
+const tags = Array.from(
+  new Set(
+    booksReadData.reduce((accumulator, book) => {
+      return [...accumulator, ...book.tags];
+    }, [])
+  )
+).sort();
 
 export default function BooksReadPage() {
   const [density, setDensity] = useState(false);
@@ -87,8 +96,10 @@ export default function BooksReadPage() {
                   currentSearchFilter={searchFilter}
                   currentSearchTerm={searchTerm}
                   onSubmit={handleFiltersPanelUpdate}
+                  searchFilterSelect={SearchFilterSelect}
                   selectedTags={selectedTags}
                   setShowSheet={setShowFiltersPanel}
+                  tags={tags}
                 />
               )}
 

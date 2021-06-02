@@ -136,7 +136,7 @@ function BookDefault({ data, onAddTag }) {
 
               <Links
                 goodReadsId={goodReadsId}
-                googleLink={googleData.volumeInfo.canonicalVolumeLink}
+                googleLink={googleData?.volumeInfo?.canonicalVolumeLink}
               />
             </Stack>
           </Box>

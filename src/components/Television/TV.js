@@ -1,9 +1,11 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 import Controls from './Controls';
 import Show from './Show';
+import TabbedDataController from '../TabbedDataController';
 import tvData from '../../DATA/tvWatched';
 import VisualMediaPageController from './VisualMediaPageController';
-import TvLayout from './TvLayout';
+import MediaLayout from '../MediaLayout';
+import ShadedRow from '../ShadedRow';
 import { Box, Divider, Sticky, Tabs } from 'gestalt';
 
 const childhoodShows = tvData.filter(item => {
@@ -25,97 +27,84 @@ const tabs = [
 ];
 
 function TV() {
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
-  const currentSelection = selections[activeTabIndex];
-
-  const handleChangeTab = ({ activeTabIndex, event }) => {
-    event.preventDefault();
-    window.scrollTo(0,0);
-    setActiveTabIndex(activeTabIndex);
-  };
-
   return (
-    <TvLayout>
-      {({ stickyTop }) => (
-        <div className="inconsolata gray textHeight-regular">
-          <VisualMediaPageController data={currentSelection}>
-            {({
-              items,
-              selectedTags,
-              handleAddTag,
-              handleRemoveTag,
-              sortOrder,
-              setSortOder,
-              sort,
-              setSort,
-              searchFilter,
-              setSearchFilter,
-              searchTerm,
-              setSearchTerm,
-            }) => (
-              <Fragment>
-                <Sticky top={stickyTop + 1}>
-                  <Box color="white">
-                    <div style={{ paddingTop: '16px' }}>
-                      <Controls
-                        selectedTags={selectedTags}
-                        onRemoveTag={handleRemoveTag}
-                        count={items.length}
-                        sortOrder={sortOrder}
-                        setSortOder={setSortOder}
-                        sort={sort}
-                        setSort={setSort}
-                        searchFilter={searchFilter}
-                        setSearchFilter={setSearchFilter}
-                        searchTerm={searchTerm}
-                        setSearchTerm={setSearchTerm}
-                      />
-                    </div>
-
+    <TabbedDataController selections={selections}>
+      {({ activeTabIndex, currentSelection, handleChangeTab }) => (
+        <MediaLayout title="TV I've watched">
+          {({ stickyTop }) => (
+            <div className="inconsolata gray textHeight-regular">
+              <VisualMediaPageController data={currentSelection}>
+                {({
+                  items,
+                  selectedTags,
+                  handleAddTag,
+                  handleRemoveTag,
+                  sortOrder,
+                  setSortOder,
+                  sort,
+                  setSort,
+                  searchFilter,
+                  setSearchFilter,
+                  searchTerm,
+                  setSearchTerm,
+                }) => (
+                  <Fragment>
+                    <Sticky top={stickyTop + 1}>
+                      <Box color="white">
+                        <div style={{ paddingTop: '16px' }}>
+                          <Controls
+                            selectedTags={selectedTags}
+                            onRemoveTag={handleRemoveTag}
+                            count={items.length}
+                            sortOrder={sortOrder}
+                            setSortOder={setSortOder}
+                            sort={sort}
+                            setSort={setSort}
+                            searchFilter={searchFilter}
+                            setSearchFilter={setSearchFilter}
+                            searchTerm={searchTerm}
+                            setSearchTerm={setSearchTerm}
+                          />
+                        </div>
+    
+                        <Box
+                          display="flex"
+                          alignItems="center"
+                          justifyContent="center"
+                          paddingY={3}
+                        >
+                          <Tabs
+                            activeTabIndex={activeTabIndex}
+                            onChange={handleChangeTab}
+                            tabs={tabs}
+                          />
+                        </Box>
+    
+                        <Divider />
+                      </Box>
+                    </Sticky>
+    
                     <Box
                       display="flex"
                       alignItems="center"
                       justifyContent="center"
-                      paddingY={3}
                     >
-                      <Tabs
-                        activeTabIndex={activeTabIndex}
-                        onChange={handleChangeTab}
-                        tabs={tabs}
-                      />
+                      <div style={{ width: '100%' }}>
+                        {items.map((tvShow, idx) => (
+                          <ShadedRow key={tvShow.imdbId || tvShow.title} idx={idx}>
+                            <Show data={tvShow} onAddTag={handleAddTag} />
+                          </ShadedRow>
+                        ))}
+                      </div>
                     </Box>
-
-                    <Divider />
-                  </Box>
-                </Sticky>
-
-                <Box
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                >
-                  <div style={{ width: '100%' }}>
-                    {items.map((tvShow, idx) => (
-                      <Box
-                        key={tvShow.imdbId || tvShow.title}
-                        alignItems="center"
-                        color={idx % 2 ? 'lightGray' : 'white'}
-                        display="flex"
-                        minHeight={56}
-                        padding={3}
-                        rounding={6}
-                      >
-                        <Show data={tvShow} onAddTag={handleAddTag} />
-                      </Box>
-                    ))}
-                  </div>
-                </Box>
-              </Fragment>
-            )}
-          </VisualMediaPageController>
-        </div>
+                  </Fragment>
+                )}
+              </VisualMediaPageController>
+            </div>
+          )}
+        </MediaLayout>
       )}
-    </TvLayout>
+    </TabbedDataController>
   );
 }
 
