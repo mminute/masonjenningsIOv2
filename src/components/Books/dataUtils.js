@@ -20,7 +20,7 @@ function matchSearchTags(book, searchTerm) {
 }
 
 function matchTagList(book, selectedTags) {
-  return book.tags.some( bkTag => selectedTags.includes(bkTag));
+  return book.tags?.some( bkTag => selectedTags.includes(bkTag));
 }
 
 export function filterBySearch({

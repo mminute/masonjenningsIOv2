@@ -1,22 +1,12 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import filterBySearch from './tvDataUtils';
+import TagsCollectionController from '../TagsCollectionController';
 
 export default function VisualMediaPageController({ children, data }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchFilter, setSearchFilter] = useState('all');
-  const [selectedTags, setSelectedTags] = useState([]);
-  const [sortOrder, setSortOder] = useState('ascending');
+  const [sortOrder, setSortOrder] = useState('ascending');
   const [sort, setSort] = useState('firstAired');
-
-  const handleAddTag = tag => {
-    if (!selectedTags.includes(tag)) {
-      setSelectedTags(current => [...current, tag]);
-    }
-  };
-
-  const handleRemoveTag = tag => {
-    setSelectedTags(current => current.filter(t => t !== tag));
-  };
 
   const sortBy = (itemA, itemB) => {
     const low = sortOrder === 'ascending' ? -1 : 1;
@@ -37,25 +27,31 @@ export default function VisualMediaPageController({ children, data }) {
     return valueA < valueB ? low : high;
   };
 
-  const items = filterBySearch({
-    items: data,
-    searchFilter,
-    searchTerm,
-    selectedTags,
-  }).sort(sortBy);
+  return (
+    <TagsCollectionController>
+      {({ handleAddTag, handleRemoveTag, selectedTags }) => {
+        const items = filterBySearch({
+          items: data,
+          searchFilter,
+          searchTerm,
+          selectedTags,
+        }).sort(sortBy);
 
-  return children({
-    items,
-    selectedTags,
-    handleAddTag,
-    handleRemoveTag,
-    sortOrder,
-    setSortOder,
-    sort,
-    setSort,
-    searchFilter,
-    setSearchFilter,
-    searchTerm,
-    setSearchTerm,
-  });
+        return children({
+          items,
+          selectedTags,
+          handleAddTag,
+          handleRemoveTag,
+          sortOrder,
+          setSortOrder,
+          sort,
+          setSort,
+          searchFilter,
+          setSearchFilter,
+          searchTerm,
+          setSearchTerm,
+        })
+      }}
+    </TagsCollectionController>
+  );
 }

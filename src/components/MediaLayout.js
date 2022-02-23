@@ -1,15 +1,15 @@
 // This is a fork of <MoreAboutLayout /> and <Layout /> in order
 // to get a bit more control without impacting the existing pages
 import React, { useRef, useEffect, useState } from 'react';
-import DesktopHeader from '../Header/DesktopHeader';
-import MobileHeader from '../Header/MobileHeader';
-import Footer from '../Footer';
-import SEO from '../seo';
-import Link from '../Link';
-import navLinks from '../../DATA/navLinks';
+import DesktopHeader from './Header/DesktopHeader';
+import MobileHeader from './Header/MobileHeader';
+import Footer from './Footer';
+import SEO from './seo';
+import Link from './Link';
+import navLinks from '../DATA/navLinks';
 import { Box } from 'gestalt';
 
-export default function TvLayout({ children }) {
+export default function MediaLayout({ children, title }) {
   const headerRef = useRef();
   const [stickyTop, setStickyTop] = useState(0);
 
@@ -53,13 +53,13 @@ export default function TvLayout({ children }) {
       </header>
 
       <main>
-        <SEO title="TV I've watched" />
+        <SEO title={title} />
 
         <div className="container" style={{ marginBottom: '96px', marginTop: 48 + stickyTop }}>
           <Box marginTop={12}>
             <Box marginBottom={12}>
               <h1 className="montserrat" style={{ fontSize: '30px' }}>
-                TV I've watched
+                {title}
               </h1>
             </Box>
 

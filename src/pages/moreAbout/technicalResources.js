@@ -38,6 +38,16 @@ function TechnicalResources() {
           </ul>
         </Section>
 
+        <Section title="AWS">
+          <ul>
+            <Itm>
+              <a href="https://egghead.io/courses/building-serverless-web-applications-with-react-aws-amplify" target="_blank">
+                Egghead.io: Building Serverless Web Applications with React & AWS Amplify
+              </a>
+            </Itm>
+          </ul>
+        </Section>
+
         <Section title={<a href="https://graphql.org/" target="_blank">GraphQL</a>}>
           <ul>
             <Itm>
@@ -91,18 +101,24 @@ function TechnicalResources() {
           </ul>
         </Section>
 
-        <Section title="Newsletters">
+        <Section title="Newsletters and Blogs">
           <ul>
             <Itm>
-              <a href="https://twitter.com/cassidoo/" target="_blank">Cassidy Williams <span class="icon-twitter"></span></a> writes <a href="https://cassidoo.co/newsletter/" target="_blank">rendezvous with cassidoo</a> about all things web development.
+              <a href="https://boz.com/" target="_blank">Andrew Bosworth</a>- VP Facebook Reality Labs
+            </Itm>
+            <Itm>
+              <a href="https://hardcoresoftware.learningbyshipping.com/" target="_blank">Hardcore Software: Inside the Rise and Fall of the PC Revolution</a>
+            </Itm>
+            <Itm>
+              <a href="https://twitter.com/cassidoo/" target="_blank">Cassidy Williams <span className="icon-twitter"></span></a> writes <a href="https://cassidoo.co/newsletter/" target="_blank">rendezvous with cassidoo</a> about all things web development.
             </Itm>
 
             <Itm>
-              <a href="https://maggieappleton.com/" target="_blank">Maggie Appleton</a> <a href="https://twitter.com/Mappletons" target="_blank"><span class="icon-twitter"></span></a> produces cool <a href="https://illustrated.dev/" target="_blank">sketchnotes</a> about web development and technology.
+              <a href="https://maggieappleton.com/" target="_blank">Maggie Appleton</a> <a href="https://twitter.com/Mappletons" target="_blank"><span className="icon-twitter"></span></a> produces cool <a href="https://illustrated.dev/" target="_blank">sketchnotes</a> about web development and technology.
             </Itm>
 
             <Itm>
-              <a href="https://twitter.com/slicknet/" target="_blank">Nicholas C. Zakas <span class="icon-twitter"></span></a> writes <a href="https://humanwhocodes.com/" target="_blank">Human who codes</a> about software engineering with a focus on JS.
+              <a href="https://twitter.com/slicknet/" target="_blank">Nicholas C. Zakas <span className="icon-twitter"></span></a> writes <a href="https://humanwhocodes.com/" target="_blank">Human who codes</a> about software engineering with a focus on JS.
             </Itm>
 
             <Itm>
@@ -125,6 +141,24 @@ function TechnicalResources() {
 
         <Section title="Frameworks and Libraries">
           <ul>
+            <Itm>
+              <a href="https://kaboomjs.com/" target="_blank">Kaboom</a>- a Javascript game programming library that helps you make games fast and fun.
+            </Itm>
+            <Itm>
+              <a href="https://gohugo.io/" target="_blank">Hugo</a>- open-source static site generator in Go (aka Golang)
+            </Itm>
+            <Itm>
+              <a href="https://fusejs.io/" target="_blank">Fuse.js</a>- 'a powerful, lightweight fuzzy-search library, with zero dependencies.'
+            </Itm>
+            <Itm>
+              <a href="https://astro.build/" target="_blank">Astro</a>- similar to a static-site generator but with optional live JS on certain components.  "Islands of interacyivity"
+            </Itm>
+            <Itm>
+              <a href="" target="_blank">Mint</a> a programming language for writing single page applications- <a href="https://stackoverflow.blog/2021/03/29/mint-a-new-language-designed-for-building-single-page-applications/?utm_source=Iterable&utm_medium=email&utm_campaign=the_overflow_newsletter" target="_blank">StackOverflow article</a>
+            </Itm>
+            <Itm>
+              <a href="https://www.fastify.io/" target="_blank">Fastify</a>- Like Express. Web framework for Node. Read about it <a href="https://pawelgrzybek.com/from-express-to-fastify-in-node-js/" target="_blank">here</a>
+            </Itm>
             <Itm>
                 <a href="https://proton-native.js.org/#/" target="_blank">Proton Native</a>- Create desktop applications through a React syntax, on all platforms. (like electron?)
             </Itm>
@@ -232,7 +266,7 @@ function TechnicalResources() {
               <a href="https://danluu.com/" target="_blank">danluu</a>
             </Itm>
             <Itm>
-              <a href="https://sonniesedge.co.uk/posts/" target="_blank">sonniesedge block site</a>
+              <a href="https://sonniesedge.co.uk/posts/" target="_blank">sonniesedge blog site</a>
             </Itm>
             <Itm>
               <a href="https://whatthefuck.is/" target="_blank">What the fuck is</a><br/>
@@ -275,6 +309,15 @@ function TechnicalResources() {
         <Section title="Articles">
           <ul>
             <Itm>
+              <a href="https://thehosk.medium.com/software-development-is-a-losers-game-fc68bb30d7eb" target="blank">Software development is a loser’s game</a>
+            </Itm>
+            <Itm>
+              <a href="https://en.wikipedia.org/wiki/XY_problem" target="_blank">XY Problem</a> is a communication problem encountered in help desk and similar situations in which the person asking for help obscures the real issue, X, because instead of asking directly about issue X, they ask how to solve a secondary issue, Y, which they believe will allow them to resolve issue X. However, resolving issue Y often does not resolve issue X, or is a poor way to resolve it, and the obscuring of the real issue and the introduction of the potentially strange secondary issue can lead to the person trying to help having unnecessary difficulties in communication and/or offering poor solutions.
+            </Itm>
+            <Itm>
+              <a href="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/" target="_blank">The Joel Test: 12 Steps to Better Code</a> (<a href="https://news.ycombinator.com/item?id=26707679" target="_blank">Hacker News thread</a>)
+            </Itm>
+            <Itm>
               <a href="https://medium.com/javascript-scene/the-dao-of-immutability-9f91a70c88cd#.givsms2q3" target="_blank">The Dao of Immutability</a> by <a href="https://twitter.com/_ericelliott" target="_blank">Eric Elliot</a>
             </Itm>
             <Itm>
@@ -302,15 +345,13 @@ function TechnicalResources() {
                 <a href="https://stackshare.io/stacks" target="_blank">"How I think about solving problems" - Human who codes</a>
               </p>
 
-              <p>
-                <ol>
-                  <Itm>Is this really a problem?</Itm>
-                  <Itm>Does the problem need to be solved?</Itm>
-                  <Itm>Does the problem need to be solved now?</Itm>
-                  <Itm>Does the problem need to be solved by me?</Itm>
-                  <Itm>Is there a simpler problem I can solve instead?</Itm>
-                </ol>
-              </p>
+              <ol>
+                <Itm>Is this really a problem?</Itm>
+                <Itm>Does the problem need to be solved?</Itm>
+                <Itm>Does the problem need to be solved now?</Itm>
+                <Itm>Does the problem need to be solved by me?</Itm>
+                <Itm>Is there a simpler problem I can solve instead?</Itm>
+              </ol>
 
               <p>I've seen versions of this list in the past, but thinking about this list in relation to concrete examples of software engineering was a good refresher.</p>
             </Itm>
@@ -343,6 +384,9 @@ function TechnicalResources() {
           <p>I haven't gone through all of these yet but they look good!</p>
 
           <ul>
+            <Itm>
+              <a href="https://swiperjs.com/demos" target="_blank">Swiper- Most Modern Mobile Touch Slider</a>
+            </Itm>
             <Itm>
               <a href="https://blitzjs.com/" target="_blank">Blitz.js</a> Like Rails for JS/React
             </Itm>
@@ -392,6 +436,10 @@ function TechnicalResources() {
 
             <Itm>
               <a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X" target="_blank">The Pragmatic Programmer: From Journeyman to Master</a> by Andrew Hunt and David Thomas (ISBN: 0-201-61622-X) - <Link to="/moreAbout/media/books/pragmaticProgrammer">Notes</Link>
+            </Itm>
+
+            <Itm>
+            <a href="https://www.amazon.com/Zero-One-Notes-Startups-Future-ebook/dp/B00J6YBOFQ/ref=sr_1_1?crid=VY553GJE9L24&dchild=1&keywords=from+zero+to+one&qid=1612753382&sprefix=from+zero+%2Caps%2C221&sr=8-1" target="_blank">Zero to One: Notes on Startups, or How to Build the Future</a> by Peter Thiel with Blake Masters (ISBN: 978-0-8041-3929-8) - <Link to="/moreAbout/media/books/zeroToOne">Notes</Link>
             </Itm>
           </ul>
         </Section>

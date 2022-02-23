@@ -4,8 +4,88 @@ export const SOMETIMES_LISTEN = 'sometimesListen';
 export const STARTED_LISTENING = 'startedListening';
 export const TO_CHECKOUT = 'toCheckout';
 export const USE_TO_LISTEN = 'useToListen';
+export const NO_LONGER_AIRING = 'noLongerAiring';
 
 export default [
+  {
+    name: 'Gameplay',
+    url: 'https://gameplay.co/',
+    category: STARTED_LISTENING,
+    note: 'A narrative podcast about video games and the virtual worlds that power culture and community.',
+  },
+  {
+    name: 'Play Retro',
+    url: 'https://www.frogpants.com/playretro',
+    category: ABANDONED,
+    note: 'Retro video games. Checked out a couple episodes. Not that fun',
+  },
+  {
+    name: 'DumpStat',
+    url: 'https://twitter.com/dumpstatpodcast',
+    category: TO_CHECKOUT,
+    note: 'DnD',
+  },
+  {
+    name: 'Ologies',
+    url: 'https://www.alieward.com/ologies',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: 'Elon Musk: The Evening Rocket',
+    url: 'https://www.pushkin.fm/show/elon-musk-the-evening-rocket/',
+    category: NO_LONGER_AIRING,
+  },
+  {
+    name: 'Gates McFadden Investigates: Who do you think you are?',
+    url: 'https://www.nacellecompany.com/catalog/gates-mcfadden-investigates-who-do-you-think-you-are/',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: "'Til Death Do Us Blart",
+    url: 'https://blart.libsyn.com/',
+    category: ALWAY_LISTEN,
+  },
+  {
+    name: 'Science VS',
+    url: 'https://gimletmedia.com/shows/science-vs',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: 'Nice Try!',
+    url: 'https://podcasts.voxmedia.com/show/nice-try',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: "Too long; Didn't watch",
+    url: 'https://podcasts.apple.com/us/podcast/too-long-didnt-watch/id1547322974',
+    category: ABANDONED,
+    note: "I liked the concept but the show isn't that engaging.",
+  },
+  {
+    name: 'Wolf 359',
+    url: 'https://www.wolf359.fm/',
+    category: ABANDONED,
+  },
+  {
+    name: 'The Worst Idea of All Time',
+    url: 'https://podcasts.apple.com/us/podcast/worst-idea-of-all-time-podcast/id824108207',
+    category: ABANDONED,
+  },
+  {
+    name: 'Star Trek: The Pod Directive',
+    url: 'https://podcasts.apple.com/us/podcast/star-trek-the-pod-directive/id1530092198',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: 'The Delta Flyers',
+    url: 'https://the-delta-flyers.captivate.fm/',
+    category: TO_CHECKOUT,
+  },
+  {
+    name: 'Cults, Cryptids, and Conspiracies',
+    url: 'https://podcasts.apple.com/us/podcast/cults-cryptids-and-conspiracies/id1236290833',
+    category: TO_CHECKOUT,
+  },
   {
     name: 'The Luc Out',
     url:
@@ -15,7 +95,7 @@ export default [
   {
     name: 'Our Ludicrous Future',
     url: 'https://ourludicrousfuture.com/',
-    category: ALWAY_LISTEN,
+    category: NO_LONGER_AIRING,
   },
   {
     name: '99% Invisible',
@@ -25,7 +105,7 @@ export default [
   {
     name: 'Friendly Fire',
     url: 'https://www.maximumfun.org/shows/friendly-fire',
-    category: ALWAY_LISTEN,
+    category: NO_LONGER_AIRING,
   },
   {
     name: 'Hello From The Magic Tavern',
@@ -61,7 +141,7 @@ export default [
   {
     name: 'The Indicator',
     url: 'https://www.npr.org/podcasts/510325/the-indicator-from-planet-money',
-    category: ALWAY_LISTEN,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'The Omnibus',
@@ -91,22 +171,22 @@ export default [
   {
     name: 'Pessimists Archive Podcast',
     url: 'https://pessimists.co/',
-    category: TO_CHECKOUT,
+    category: ABANDONED,
   },
   {
     name: 'I Podius',
     url: 'https://maximumfun.org/podcasts/i-podius/',
-    category: TO_CHECKOUT,
+    category: ABANDONED,
   },
   {
     name: 'Everything Is Alive',
     url: 'https://www.radiotopia.fm/podcasts/everything-is-alive',
-    category: SOMETIMES_LISTEN,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'Friends At The Table',
     url: 'http://friendsatthetable.net/',
-    category: SOMETIMES_LISTEN,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'Hardcore History',
@@ -121,7 +201,7 @@ export default [
   {
     name: 'More Or Less: Behind the Statistics',
     url: 'https://www.bbc.co.uk/programmes/p02nrss1/episodes/downloads',
-    category: SOMETIMES_LISTEN,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'Radio Diaries',
@@ -151,7 +231,7 @@ export default [
   {
     name: 'The McElroy Brothers Will Be In Trolls World Tour',
     url: 'https://trolls2.libsyn.com/',
-    category: SOMETIMES_LISTEN,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'Twenty Thousand Hertz',
@@ -161,12 +241,12 @@ export default [
   {
     name: 'Wooden Overcoats',
     url: 'https://www.woodenovercoats.com/listen',
-    category: SOMETIMES_LISTEN,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'The Memory Palace',
     url: 'http://thememorypalace.us/',
-    category: SOMETIMES_LISTEN,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'Software Engineering Daily',
@@ -181,7 +261,7 @@ export default [
   {
     name: 'Roderick on the Line',
     url: 'http://www.merlinmann.com/roderick/',
-    category: STARTED_LISTENING,
+    category: ABANDONED,
   },
   {
     name: 'Maintainers Anonymous',
@@ -194,15 +274,15 @@ export default [
     category: USE_TO_LISTEN,
   },
   {
-    name: 'Corona Virus Daily',
+    name: 'Corona Virus Daily/Consider',
     url: 'https://www.npr.org/podcasts/510355/coronavirusdaily',
-    category: STARTED_LISTENING,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'Short Wave',
     url:
         'https://www.npr.org/podcasts/510351/short-wave?creative=391239660649&keyword=%2Bnpr%20%2Bshort%20%2Bwave&matchtype=b&network=g&device=c&gclid=EAIaIQobChMIn9_hp8H05QIVypyzCh08pQNYEAAYASAAEgKOb_D_BwE',
-    category: STARTED_LISTENING,
+    category: USE_TO_LISTEN,
   },
   {
     name: '13 Minutes To The Moon',
@@ -217,7 +297,7 @@ export default [
   {
     name: '50 Things That Made The Modern Ecomomy',
     url: 'https://www.bbc.co.uk/programmes/p04b1g3c/episodes/downloads',
-    category: STARTED_LISTENING,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'Short Wave',

@@ -1,6 +1,4 @@
 import React, { useState, useRef } from 'react';
-import booksReadData from '../../../DATA/booksRead';
-import SearchFilterSelect from '../SearchFilterSelect';
 import {
   Box,
   Button,
@@ -13,14 +11,6 @@ import {
   SearchField,
   Sheet,
 } from 'gestalt';
-
-const tags = Array.from(
-  new Set(
-    booksReadData.reduce((accumulator, book) => {
-      return [...accumulator, ...book.tags];
-    }, [])
-  )
-).sort();
 
 function Tag(props) {
   const { checked, onChange, text } = props;
@@ -45,7 +35,9 @@ function PanelContents(props) {
     currentSearchFilter,
     currentSearchTerm,
     dataRef,
+    searchFilterSelect,
     selectedTags,
+    tags,
   } = props;
 
   const [searchFilter, setSearchFilter] = useState(currentSearchFilter);
@@ -63,6 +55,8 @@ function PanelContents(props) {
   // Set any data to be submitted on props.contentsRef
   dataRef.current = { searchFilter, searchTerm, selectedTags: localSelectedTags };
 
+  const SearchFilterSelect = searchFilterSelect;
+
   return (
     <Box>
       <Box direction="row" display="flex" justifyContent="end">
@@ -77,10 +71,12 @@ function PanelContents(props) {
           />
         </Box>
 
-        <SearchFilterSelect
-          searchFilter={searchFilter}
-          setSearchFilter={setSearchFilter}
-        />
+        {searchFilterSelect && (
+          <SearchFilterSelect
+            searchFilter={searchFilter}
+            setSearchFilter={setSearchFilter}
+          />
+        )}
       </Box>
 
       <Box marginTop={4}>
@@ -106,6 +102,7 @@ export default function FiltersPanel(props) {
     currentSearchFilter,
     currentSearchTerm,
     onSubmit,
+    searchFilterSelect,
     selectedTags,
     setShowSheet,
     tags,
@@ -149,6 +146,7 @@ export default function FiltersPanel(props) {
           currentSearchTerm={currentSearchTerm}
           dataRef={dataRef}
           onSubmit={onSubmit}
+          searchFilterSelect={searchFilterSelect}
           selectedTags={selectedTags}
           tags={tags}
         />

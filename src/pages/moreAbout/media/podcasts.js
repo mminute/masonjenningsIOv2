@@ -9,6 +9,7 @@ import podcastList, {
   STARTED_LISTENING,
   TO_CHECKOUT,
   USE_TO_LISTEN,
+  NO_LONGER_AIRING,
 } from '../../../DATA/podcasts';
 import 'gestalt/dist/gestalt.css';
 
@@ -19,6 +20,7 @@ const categoryTitle = {
   [STARTED_LISTENING]: 'I’ve started listening to',
   [TO_CHECKOUT]: 'I’ve been meaning to check out',
   [USE_TO_LISTEN]: 'I use to listen to',
+  [NO_LONGER_AIRING]: 'No longer airing'
 };
 
 function Category({ id }) {
@@ -57,6 +59,7 @@ function Podcasts() {
           STARTED_LISTENING,
           TO_CHECKOUT,
           USE_TO_LISTEN,
+          NO_LONGER_AIRING,
           ABANDONED,
         ].map((id) => (
           <Category key={id} id={id} />

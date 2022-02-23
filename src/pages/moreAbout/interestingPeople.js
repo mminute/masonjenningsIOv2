@@ -27,6 +27,9 @@ function InterestingPeople() {
           <Itm>
             <a href="https://en.wikipedia.org/wiki/Annie_Malone" target="_blank">Annie Malone</a> was the first female African-American millionaire.
           </Itm>
+          <Itm>
+            <a href="https://www.cnn.com/videos/us/2020/07/17/6888th-central-postal-directory-battalion-greatest-gen-ts-orig.cnn/video/playlists/military-wwii-sponsorship/">The women of the 6888th Central Postal Directory Battalion</a>
+          </Itm>
         </ul>
       </div>
     </MoreAboutLayout>
