@@ -142,6 +142,18 @@ function TechnicalResources() {
         <Section title="Frameworks and Libraries">
           <ul>
             <Itm>
+              <a href="https://kaboomjs.com/" target="_blank">Kaboom</a>- a Javascript game programming library that helps you make games fast and fun.
+            </Itm>
+            <Itm>
+              <a href="https://gohugo.io/" target="_blank">Hugo</a>- open-source static site generator in Go (aka Golang)
+            </Itm>
+            <Itm>
+              <a href="https://fusejs.io/" target="_blank">Fuse.js</a>- 'a powerful, lightweight fuzzy-search library, with zero dependencies.'
+            </Itm>
+            <Itm>
+              <a href="https://astro.build/" target="_blank">Astro</a>- similar to a static-site generator but with optional live JS on certain components.  "Islands of interacyivity"
+            </Itm>
+            <Itm>
               <a href="" target="_blank">Mint</a> a programming language for writing single page applications- <a href="https://stackoverflow.blog/2021/03/29/mint-a-new-language-designed-for-building-single-page-applications/?utm_source=Iterable&utm_medium=email&utm_campaign=the_overflow_newsletter" target="_blank">StackOverflow article</a>
             </Itm>
             <Itm>
@@ -254,7 +266,7 @@ function TechnicalResources() {
               <a href="https://danluu.com/" target="_blank">danluu</a>
             </Itm>
             <Itm>
-              <a href="https://sonniesedge.co.uk/posts/" target="_blank">sonniesedge block site</a>
+              <a href="https://sonniesedge.co.uk/posts/" target="_blank">sonniesedge blog site</a>
             </Itm>
             <Itm>
               <a href="https://whatthefuck.is/" target="_blank">What the fuck is</a><br/>

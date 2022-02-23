@@ -6,12 +6,70 @@ export const TO_CHECKOUT = 'toCheckout';
 export const USE_TO_LISTEN = 'useToListen';
 export const NO_LONGER_AIRING = 'noLongerAiring';
 
-
 export default [
+  {
+    name: 'Gameplay',
+    url: 'https://gameplay.co/',
+    category: STARTED_LISTENING,
+    note: 'A narrative podcast about video games and the virtual worlds that power culture and community.',
+  },
+  {
+    name: 'Play Retro',
+    url: 'https://www.frogpants.com/playretro',
+    category: ABANDONED,
+    note: 'Retro video games. Checked out a couple episodes. Not that fun',
+  },
+  {
+    name: 'DumpStat',
+    url: 'https://twitter.com/dumpstatpodcast',
+    category: TO_CHECKOUT,
+    note: 'DnD',
+  },
+  {
+    name: 'Ologies',
+    url: 'https://www.alieward.com/ologies',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: 'Elon Musk: The Evening Rocket',
+    url: 'https://www.pushkin.fm/show/elon-musk-the-evening-rocket/',
+    category: NO_LONGER_AIRING,
+  },
+  {
+    name: 'Gates McFadden Investigates: Who do you think you are?',
+    url: 'https://www.nacellecompany.com/catalog/gates-mcfadden-investigates-who-do-you-think-you-are/',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: "'Til Death Do Us Blart",
+    url: 'https://blart.libsyn.com/',
+    category: ALWAY_LISTEN,
+  },
+  {
+    name: 'Science VS',
+    url: 'https://gimletmedia.com/shows/science-vs',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: 'Nice Try!',
+    url: 'https://podcasts.voxmedia.com/show/nice-try',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: "Too long; Didn't watch",
+    url: 'https://podcasts.apple.com/us/podcast/too-long-didnt-watch/id1547322974',
+    category: ABANDONED,
+    note: "I liked the concept but the show isn't that engaging.",
+  },
+  {
+    name: 'Wolf 359',
+    url: 'https://www.wolf359.fm/',
+    category: ABANDONED,
+  },
   {
     name: 'The Worst Idea of All Time',
     url: 'https://podcasts.apple.com/us/podcast/worst-idea-of-all-time-podcast/id824108207',
-    category: SOMETIMES_LISTEN,
+    category: ABANDONED,
   },
   {
     name: 'Star Trek: The Pod Directive',
@@ -37,7 +95,7 @@ export default [
   {
     name: 'Our Ludicrous Future',
     url: 'https://ourludicrousfuture.com/',
-    category: ALWAY_LISTEN,
+    category: NO_LONGER_AIRING,
   },
   {
     name: '99% Invisible',
