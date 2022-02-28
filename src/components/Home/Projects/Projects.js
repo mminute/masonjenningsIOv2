@@ -1,6 +1,8 @@
 import React from 'react';
-import { LumenSEE, MasonJenningsIO, ProveIt } from './ProjectData';
 import { Box } from 'gestalt';
+import {
+  LumenSEE, MasonJenningsIO, MinuteInventory, ProveIt,
+} from './ProjectData';
 
 export default function Projects() {
   return (
@@ -13,7 +15,13 @@ export default function Projects() {
 
       <Box column={6} margin="auto">
         <div className="inconsolata gray textHeight-regular" style={{ fontSize: '12px', textAlign: 'center' }}>
-          A sampling of my work thus far.  A collection of applications built to test my skillset, challenge me to learn new aspects of code, and build something useful.  Maybe even something cool.
+          A sampling of my work thus far.
+          {' '}
+          A collection of applications built to test my skillset,
+          {' '}
+          challenge me to learn new aspects of code, and build something useful.
+          {' '}
+          Maybe even something cool.
         </div>
       </Box>
 
@@ -22,6 +30,7 @@ export default function Projects() {
           <h2 className="montserrat gray" style={{ fontSize: '18px' }}>LATEST PROJECTS</h2>
         </Box>
 
+        <MinuteInventory />
         <MasonJenningsIO />
       </Box>
 
@@ -36,29 +45,3 @@ export default function Projects() {
     </section>
   );
 }
-
-// <section class="module">
-//     <div class="container">
-//         <div class="row">
-//             <div class="col-sm-6 col-sm-offset-3">
-//                 <h2 class="module-title align-center font-alt">Projects</h2>
-//                 <div class="module-subtitle align-center font-inc">
-//                     My work thus far.  A collection of web-apps built to test my skillset, challenge me to learn new aspects of code, and build something useful.  Maybe even something cool. 
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="container">
-//         <div class="row">
-//             <div class="col-md-3 col-sm-offset-1">
-//                 <h4 class="font-alt align-center">
-//                     Flatiron Projects
-//                 </h4>
-//             </div>
-//         </div>
-//     </div>
-//     <br>
-//     <div class="container">
-
-
-// </section>

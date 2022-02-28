@@ -23,26 +23,24 @@ function Header({ headerLinks, stickyHeader }) {
   function handleScroll() {
     if (headerRef.current && !stickyHeader) {
       const headerMultiplier = 1.25;
-      const newOpacity =
-        1 -
-        (headerMultiplier * headerRef.current.clientHeight - window.scrollY) /
-          (headerMultiplier * headerRef.current.clientHeight);
+      const newOpacity = 1
+        - (headerMultiplier * headerRef.current.clientHeight - window.scrollY)
+          / (headerMultiplier * headerRef.current.clientHeight);
       setOpacity(newOpacity);
       setScrolled(window.scrollY > headerRef.current.clientHeight);
     }
   }
 
-  const linkStyles =
-    !stickyHeader && opacity < 0.75
-      ? {
-          backgroundColor: 'black',
-          color: 'white',
-        }
-      : {};
+  const linkStyles = !stickyHeader && opacity < 0.75
+    ? {
+      backgroundColor: 'black',
+      color: 'white',
+    }
+    : {};
 
-  const links = headerLinks.map((linkInfo, idx) => (
+  const links = headerLinks.map((linkInfo) => (
     <Link
-      key={idx}
+      key={linkInfo.to}
       gatsbyLink={linkInfo.gatsbyLink}
       styleOverrides={{
         paddingBottom: '4px',

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Box, IconButton } from 'gestalt';
+import PropTypes from 'prop-types';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
 import navLinks from '../DATA/navLinks';
@@ -7,8 +9,6 @@ import {
   Pinterest,
   RamlaBenaisa,
 } from '../components/Employments';
-import { useStaticQuery, graphql } from 'gatsby';
-import { Box, IconButton } from 'gestalt';
 
 function Section({ children, title }) {
   return (
@@ -26,11 +26,21 @@ function Section({ children, title }) {
   );
 }
 
-function Education({ dates, name, programName, url }) {
+Section.propTypes = {
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+function Education({
+  dates, name, programName, url,
+}) {
   return (
     <div className="inconsolata textSize-regular textHeight-regular">
       <Box marginBottom={3}>
-        {name}, {dates}
+        {name}
+        ,
+        {' '}
+        {dates}
         <br />
         <a href={url}>{programName}</a>
       </Box>
@@ -38,34 +48,26 @@ function Education({ dates, name, programName, url }) {
   );
 }
 
+Education.propTypes = {
+  dates: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  programName: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+};
+
 function Resume() {
-  const data = useStaticQuery(graphql`
-    {
-      allFile(filter: { extension: { eq: "pdf" } }) {
-        edges {
-          node {
-            publicURL
-            name
-          }
-        }
-      }
-    }
-  `);
-
-  const pdf = data.allFile.edges.find(file => file.node.name === 'resume');
-
   const moreAboutMe = {
     to: '/moreAbout/me/',
     txt: 'About Me',
     gatsbyLink: true,
-  }
+  };
 
   return (
     <Layout headerLinks={[moreAboutMe, navLinks.contact, navLinks.home]} stickyHeader>
       <SEO title="Resume" />
       <div className="container">
         <div style={{ position: 'fixed', right: '50px' }}>
-          <a href={pdf.node.publicURL} download>
+          <a href="/resume.pdf" download>
             <IconButton
               accessibilityLabel="Download resume"
               icon="download"

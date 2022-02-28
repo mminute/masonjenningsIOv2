@@ -16,7 +16,8 @@ export const PLATFORM = {
   c64: 'Commodore 64',
   windows3dot1: 'Windows 3.1',
   windows95: 'Windows 95',
-}
+  quest2: 'Meta Quest 2',
+};
 
 class Game {
   constructor({
@@ -54,6 +55,52 @@ const ofInterest = [
 ];
 
 const played = [
+  new Game({
+    title: 'Tetris Effect: Connected',
+    type: VIDEO_GAME,
+    link: 'https://www.playstation.com/en-us/games/tetris-effect/',
+    played: true,
+    owned: true,
+    platform: PLATFORM.quest2,
+    vr: true,
+  }),
+  new Game({
+    title: 'Vader Immortal: Episode I',
+    type: VIDEO_GAME,
+    link: 'https://www.oculus.com/experiences/quest/2108775495884888',
+    played: true,
+    owned: true,
+    platform: PLATFORM.quest2,
+    vr: true,
+  }),
+  new Game({
+    title: 'Walkabout Mini Golf',
+    type: VIDEO_GAME,
+    link: 'https://www.oculus.com/experiences/quest/2462678267173943',
+    played: true,
+    owned: true,
+    platform: PLATFORM.quest2,
+    vr: true,
+  }),
+  new Game({
+    title: 'The Thrill of the Fight',
+    type: VIDEO_GAME,
+    link: 'https://www.oculus.com/experiences/quest/3008315795852749',
+    played: true,
+    owned: true,
+    platform: PLATFORM.quest2,
+    vr: true,
+    notes: 'Immersive fitness game',
+  }),
+  new Game({
+    title: 'Ultrawings 2',
+    type: VIDEO_GAME,
+    link: 'https://www.oculus.com/experiences/quest/3215828205181680/',
+    played: true,
+    owned: true,
+    platform: PLATFORM.quest2,
+    vr: true,
+  }),
   new Game({
     title: 'Chex Quest',
     type: VIDEO_GAME,

@@ -2,7 +2,7 @@
 
 To see your work in progress: `gatsby develop`
 
-How to update: TODO
+How to update: See `Notes on deployment`
 
 ### Notes on deployment
 - Generate the production build with `gatsby build`
