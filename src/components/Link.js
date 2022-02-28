@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const linkStyles = {
   textDecoration: 'none',
@@ -17,7 +18,7 @@ function makeGatsbyLink({ to, txt, styleOverrides }) {
 
 // Only the first navigation to an id was working
 // This hack forces the window to scroll to the id
-const scrollTo = id => {
+const scrollTo = (id) => {
   if (id.match(/^#/)) {
     const el = document.querySelector(id);
 
@@ -25,6 +26,8 @@ const scrollTo = id => {
       return window.scrollTo(0, el.offsetTop - 20);
     }
   }
+
+  return null;
 };
 
 function makeLink({ to, txt, styleOverrides }) {
@@ -39,7 +42,9 @@ function makeLink({ to, txt, styleOverrides }) {
   );
 }
 
-function LinkComponent({ font, gatsbyLink, styleOverrides, to, txt }) {
+function LinkComponent({
+  font, gatsbyLink, styleOverrides, to, txt,
+}) {
   const makeFn = gatsbyLink ? makeGatsbyLink : makeLink;
 
   return (
@@ -48,5 +53,20 @@ function LinkComponent({ font, gatsbyLink, styleOverrides, to, txt }) {
     </div>
   );
 }
+
+LinkComponent.propTypes = {
+  font: PropTypes.string,
+  gatsbyLink: PropTypes.bool,
+  styleOverrides: PropTypes.shape({}),
+  to: PropTypes.string.isRequired,
+  txt: PropTypes.string,
+};
+
+LinkComponent.defaultProps = {
+  font: null,
+  gatsbyLink: false,
+  styleOverrides: {},
+  txt: '',
+};
 
 export default LinkComponent;

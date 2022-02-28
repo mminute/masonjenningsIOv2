@@ -1,15 +1,15 @@
 import React from 'react';
+import { Box } from 'gestalt';
 import Layout from './Layout/Layout';
 import SEO from './seo';
 import navLinks from '../DATA/navLinks';
-import { Box } from 'gestalt';
 
 export default function MoreAboutLayout({ children, excludeAboutMe, title, subTitle }) {
   const headerLinks = [navLinks.contact, navLinks.home];
   if (!excludeAboutMe) {
     headerLinks.unshift(navLinks.moreAboutMe);
   }
-  
+
   return (
     <Layout headerLinks={headerLinks} stickyHeader>
       <SEO title={title} />

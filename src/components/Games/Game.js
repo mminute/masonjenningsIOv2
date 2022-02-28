@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Image from '../image';
-import { BOARD_GAME, VIDEO_GAME, RECOMMEND } from '../../DATA/games';
 import { Box, IconButton, TapArea } from 'gestalt';
+import Image from '../Image';
+import { BOARD_GAME, VIDEO_GAME, RECOMMEND } from '../../DATA/games';
 
 function VRIcon() {
   return (

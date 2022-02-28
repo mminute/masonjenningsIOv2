@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
-import { Link as GatsbyLink } from 'gatsby';
-import { Box, Divider, IconButton, Stack, TapArea } from 'gestalt';
+import {
+  Box,
+  Divider,
+  IconButton,
+  Stack,
+  TapArea,
+} from 'gestalt';
 import './Header.css';
-
+import PropTypes from 'prop-types';
+import Link from '../Link';
 
 // mobileHeader is display: none above 950px window width
 export default function MobileHeader({ headerLinks }) {
@@ -19,17 +25,18 @@ export default function MobileHeader({ headerLinks }) {
         paddingY={1}
       >
         <Box marginStart={4}>
-          <GatsbyLink
+          <Link
             to="/"
             style={{ textDecoration: 'none', color: '#111' }}
+            gatsbyLink
           >
             Mason Jennings
-          </GatsbyLink>
+          </Link>
         </Box>
         <IconButton
           accessibilityLabel="Page navigation"
           icon="menu"
-          onClick={() => setShowMobileLinks(current => !current)}
+          onClick={() => setShowMobileLinks((current) => !current)}
         />
       </Box>
 
@@ -43,14 +50,14 @@ export default function MobileHeader({ headerLinks }) {
           <Divider />
           <Box marginBottom={2}>
             <Stack alignItems="end">
-              {headerLinks.map((linkInfo, idx) => (
-                <Box paddingY={2} paddingX={4}>
+              {headerLinks.map((linkInfo) => (
+                <Box paddingY={2} paddingX={4} key={linkInfo.to}>
                   <TapArea onTap={() => setShowMobileLinks(false)}>
                     <Link
-                      key={`mobile-nav-link-${idx}`}
-                      gatsbyLink={linkInfo.gatsbyLink}
+                      key={`mobile-nav-link-${linkInfo.to}`}
                       to={linkInfo.to}
                       txt={linkInfo.txt}
+                      gatsbyLink={linkInfo.gatsbyLink}
                     />
                   </TapArea>
                 </Box>
@@ -62,3 +69,9 @@ export default function MobileHeader({ headerLinks }) {
     </div>
   );
 }
+
+MobileHeader.propTypes = {
+  headerLinks: PropTypes.arrayOf(
+    PropTypes.shape({ to: PropTypes.string, txt: PropTypes.string }),
+  ).isRequired,
+};

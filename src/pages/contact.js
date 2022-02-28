@@ -9,7 +9,7 @@ function Contact() {
     to: '/moreAbout/me/',
     txt: 'About Me',
     gatsbyLink: true,
-  }
+  };
 
   const submitForm = (evt) => {
     evt.preventDefault();
@@ -17,7 +17,7 @@ function Contact() {
     const data = new FormData(form);
     const xhr = new XMLHttpRequest();
     xhr.open(form.method, form.action);
-    xhr.setRequestHeader("Accept", "application/json");
+    xhr.setRequestHeader('Accept', 'application/json');
     xhr.onreadystatechange = () => {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
@@ -27,8 +27,8 @@ function Contact() {
       }
     };
     xhr.send(data);
-  }
-  
+  };
+
   return (
     <Layout headerLinks={[moreAboutMe, navLinks.resume, navLinks.home]} stickyHeader stickyFooter>
       <SEO title="Contact" />
@@ -97,7 +97,7 @@ function Contact() {
                     className="btn btn-round btn-g"
                   />
                 </Box>
-                
+
                 <input
                   type="hidden"
                   name="_next"
