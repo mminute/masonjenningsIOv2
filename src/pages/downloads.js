@@ -26,7 +26,7 @@ ListItem.defaultProps = {
   note: '',
 };
 
-const NotFoundPage = () => (
+const Downloads = () => (
   <Layout
     headerLinks={[navLinks.home, navLinks.moreAboutMe, navLinks.contact]}
     stickyHeader
@@ -39,12 +39,37 @@ const NotFoundPage = () => (
       <Box paddingY={6}>
         <h3>Minute Inventory</h3>
 
+        <p>Version 1.1.0</p>
+        <p>Added created date and a way to migrate files from v1.0.0</p>
+        <ul>
+          <li>
+            Mac
+            <ul>
+              <ListItem to="/MinuteInventory-1.1.0.dmg" note="(This is probably the one that you want)">
+                MinuteInventory-1.1.0.dmg
+              </ListItem>
+
+              <ListItem to="/MinuteInventory-1.1.0-mac.zip">
+                MinuteInventory-1.1.0-mac.zip
+              </ListItem>
+
+              <ListItem to="/MinuteInventory-1.1.0-arm64.dmg">
+                MinuteInventory-1.1.0-arm64.dmg
+              </ListItem>
+
+              <ListItem to="/MinuteInventory-1.1.0-arm64-mac.zip">
+                MinuteInventory-1.1.0-arm64-mac.zip
+              </ListItem>
+            </ul>
+          </li>
+        </ul>
+
         <p>Version 1.0.0</p>
         <ul>
           <li>
             Mac
             <ul>
-              <ListItem to="/MinuteInventory-1.0.0.dmg" note="(This is probably the one that you want)">
+              <ListItem to="/MinuteInventory-1.0.0.dmg">
                 MinuteInventory-1.0.0.dmg
               </ListItem>
 
@@ -67,4 +92,4 @@ const NotFoundPage = () => (
   </Layout>
 );
 
-export default NotFoundPage;
+export default Downloads;
