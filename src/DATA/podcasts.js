@@ -8,6 +8,102 @@ export const NO_LONGER_AIRING = 'noLongerAiring';
 
 export default [
   {
+    name: 'Triple Click',
+    url: 'https://maximumfun.org/podcasts/triple-click/',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: 'The Last Archive',
+    url: 'https://www.thelastarchive.com/',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: 'Revisionist History',
+    url: 'https://www.pushkin.fm/podcasts/revisionist-history',
+    category: SOMETIMES_LISTEN,
+    note: 'Malcolm Gladwell',
+  },
+  {
+    name: 'My First Dungeon',
+    url: 'https://anchor.fm/brian-flaherty2',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: 'The Twenty Sided Podcast',
+    url: 'https://www.twentysidedpodcast.com/',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: 'Endless Thread',
+    url: 'https://www.wbur.org/podcasts/endlessthread',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: 'Let`s Make A Sci-Fi',
+    url: 'https://www.cbc.ca/listen/cbc-podcasts/1061-let-s-make-a-sci-fi',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: 'What`s Your Problem?',
+    url: 'https://www.pushkin.fm/podcasts/whats-your-problem',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: 'This Podcast Will Kill You',
+    url: 'https://thispodcastwillkillyou.com/',
+    category: ABANDONED,
+  },
+  {
+    name: 'Dan Snow`s History Hit',
+    url: 'https://www.historyhit.com/podcast/dan-snows-history-hit/',
+    category: ABANDONED,
+  },
+  {
+    name: 'Critical Role',
+    url: 'https://critrole.com/podcast/',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: 'Smartless',
+    url: 'https://www.smartless.com/',
+    category: TO_CHECKOUT,
+  },
+  {
+    name: 'Brad and Will Make a Tech Pod',
+    url: 'https://techpod.content.town/',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: 'Car Show! with Eddie Alterman',
+    url: 'https://www.pushkin.fm/podcasts/car-show-with-eddie-alterman',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: 'Dear Hank and John',
+    url: 'https://www.wnycstudios.org/podcasts/dear-hank-john',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: 'Patented: History of Inventions',
+    url: 'https://access.historyhit.com/patented',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: 'Household Faces',
+    url: 'https://foreverdogpodcasts.com/podcasts/household-faces/',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: 'Meditative Story',
+    url: 'https://meditativestory.com/',
+    category: TO_CHECKOUT,
+  },
+  {
+    name: 'Hot Money',
+    url: 'https://www.ft.com/content/762e4648-06d7-4abd-8d1e-ccefb74b3244',
+    category: STARTED_LISTENING,
+  },
+  {
     name: 'Gameplay',
     url: 'https://gameplay.co/',
     category: STARTED_LISTENING,
@@ -236,7 +332,7 @@ export default [
   {
     name: 'Twenty Thousand Hertz',
     url: 'https://www.20k.org/archive',
-    category: SOMETIMES_LISTEN,
+    category: ALWAY_LISTEN,
   },
   {
     name: 'Wooden Overcoats',
