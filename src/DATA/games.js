@@ -8,15 +8,16 @@ export const RECOMMEND = {
 };
 
 export const PLATFORM = {
+  c64: 'Commodore 64',
+  dos: 'DOS',
+  playstation: 'PlayStation',
   ps4: 'PS4',
+  quest2: 'Meta Quest 2',
   steam: 'Steam',
   steamWindows: 'Steam- Windows',
   switch: 'Nintendo Switch',
-  playstation: 'PlayStation',
-  c64: 'Commodore 64',
   windows3dot1: 'Windows 3.1',
   windows95: 'Windows 95',
-  quest2: 'Meta Quest 2',
 };
 
 class Game {
@@ -55,6 +56,65 @@ const ofInterest = [
 ];
 
 const played = [
+  new Game({
+    title: 'Creed: Rise to Glory',
+    type: VIDEO_GAME,
+    link: 'https://www.oculus.com/experiences/quest/2366245336750543',
+    played: true,
+    owned: true,
+    recommended: RECOMMEND.no,
+    vr: true,
+    platform: PLATFORM.quest2,
+    notes: 'Really made me feel sick!',
+  }),
+  new Game({
+    title: 'Knockout League',
+    type: VIDEO_GAME,
+    link: 'https://www.oculus.com/experiences/quest/2078236868960051/',
+    played: true,
+    owned: true,
+    recommended: RECOMMEND.neutral,
+    vr: true,
+    platform: PLATFORM.quest2,
+  }),
+  new Game({
+    title: 'Job Simulator',
+    type: VIDEO_GAME,
+    link: 'https://www.oculus.com/experiences/quest/3235570703151406/',
+    played: true,
+    owned: true,
+    recommended: RECOMMEND.neutral,
+    vr: true,
+    platform: PLATFORM.quest2,
+  }),
+  new Game({
+    title: 'Beat Saber',
+    type: VIDEO_GAME,
+    link: 'https://en.wikipedia.org/wiki/Beat_Saber',
+    played: true,
+    owned: true,
+    recommended: RECOMMEND.yes,
+    vr: true,
+    platform: PLATFORM.quest2,
+  }),
+  new Game({
+    title: 'Moss',
+    type: VIDEO_GAME,
+    link: 'https://en.wikipedia.org/wiki/Moss_(video_game)',
+    played: true,
+    owned: true,
+    vr: true,
+    platform: PLATFORM.quest2,
+  }),
+  new Game({
+    // https://store.steampowered.com/app/730580/MegaRace_1/
+    title: 'MegaRace',
+    type: VIDEO_GAME,
+    link: 'https://en.wikipedia.org/wiki/MegaRace',
+    played: true,
+    owned: false,
+    platform: PLATFORM.dos,
+  }),
   new Game({
     title: 'Tetris Effect: Connected',
     type: VIDEO_GAME,
@@ -159,7 +219,7 @@ const played = [
     owned: false,
     completed: true,
     recommended: RECOMMEND.yes,
-    platform: PLATFORM.steam
+    platform: PLATFORM.steam,
   }),
   new Game({
     title: 'SimCity 2000',
@@ -668,7 +728,7 @@ const played = [
     title: 'Moss',
     type: VIDEO_GAME,
     link: 'https://en.wikipedia.org/wiki/Moss_(video_game)',
-    played: false,
+    played: true,
     owned: true,
     vr: true,
     platform: PLATFORM.ps4,
@@ -736,7 +796,7 @@ const played = [
     played: true,
     owned: true,
     platform: PLATFORM.steam,
-    notes: 'SO HARD!'
+    notes: 'SO HARD!',
   }),
   new Game({
     title: 'Defect',

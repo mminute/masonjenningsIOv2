@@ -58,7 +58,7 @@ export function Pinterest() {
       url="https://newsroom.pinterest.com/en/company"
       roles={[
         { title: 'SOFTWARE ENGINEER', dates: '02/2017 - PRESENT' },
-        { title: 'APPRENTICE SOFTWARE ENGINEERING', dates: '04/2016 - 02/2017' }
+        { title: 'APPRENTICE SOFTWARE ENGINEERING', dates: '04/2016 - 02/2017' },
       ]}
     >
       <Box>
@@ -68,7 +68,8 @@ export function Pinterest() {
           </Box>
 
           <UL>
-            <LI>CORE PRODUCT: NATIVE PUBLISHING - ANDROID (03/2021 - PRESENT)</LI>
+            <LI>CORE PRODUCT: NATIVE PUBLISHING - WEB (04/2022 - PRESENT)</LI>
+            <LI>CORE PRODUCT: NATIVE PUBLISHING - ANDROID (03/2021 - 04/2022)</LI>
             <LI>CORE PRODUCT: SHOPPING - WEB (07/2020 - 03/2021)</LI>
             <LI>CP: LEGO (11/2019 - 07/2020)</LI>
             <LI>CP: Core UI WEB (02/2018 - 11/2019)</LI>
