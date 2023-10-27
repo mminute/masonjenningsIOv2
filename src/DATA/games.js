@@ -53,9 +53,30 @@ const ofInterest = [
     link:
       'https://boardgamegeek.com/boardgame/231327/grizzled-armistice-edition',
   }),
+  new Game({
+    title: 'Citizen Sleeper',
+    type: VIDEO_GAME,
+    link: 'https://www.nintendo.com/store/products/citizen-sleeper-switch/',
+    vr: false,
+    platform: PLATFORM.switch,
+  }),
 ];
 
+// Add games:
+// 1. Intercosmos 2000
+
 const played = [
+  new Game({
+    title: 'Stray',
+    type: VIDEO_GAME,
+    link: 'https://en.wikipedia.org/wiki/Stray_(video_game)',
+    played: true,
+    owned: true,
+    recommended: RECOMMEND.yes,
+    vr: false,
+    platform: PLATFORM.ps4,
+    completed: true,
+  }),
   new Game({
     title: 'Creed: Rise to Glory',
     type: VIDEO_GAME,

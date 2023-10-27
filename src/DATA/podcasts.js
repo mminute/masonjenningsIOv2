@@ -8,6 +8,112 @@ export const NO_LONGER_AIRING = 'noLongerAiring';
 
 export default [
   {
+    name: 'Who shat on the floor at my wedding?',
+    url: 'https://www.whoshatontheflooratmywedding.com/',
+    category: NO_LONGER_AIRING,
+  },
+  {
+    name: 'WGBH - The Big Dig',
+    url: 'https://www.wgbh.org/podcasts/the-big-dig',
+    category: TO_CHECKOUT,
+  },
+  {
+    name: 'WBUR - Short Run: The Gun Machine',
+    url: 'https://www.wbur.org/podcasts/short-run',
+    category: TO_CHECKOUT,
+  },
+  {
+    name: 'Talk of the Table',
+    url: 'https://www.manysidedmedia.com/talkofthetable',
+    category: ALWAY_LISTEN,
+    note: "The hosts talk with game designers, actual play producers, journalists, academics, artists, and performers about all the coolest things happening in the TTRPG community in an effort to understand what's on the mind of the tabletop industry.",
+  },
+  {
+    name: 'Unhedged from Financial Times and Pushkin',
+    url: 'https://shows.acast.com/unhedged',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: 'Planet Arcana',
+    url: 'https://www.planetarcana.com/',
+    category: TO_CHECKOUT,
+  },
+  {
+    name: 'Dungeons and Daddies',
+    url: 'https://www.dungeonsanddaddies.com/',
+    category: TO_CHECKOUT,
+  },
+  {
+    name: 'Starfleet Leadership Academy',
+    url: 'https://www.starfleetleadership.academy/',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: 'Babylon 5 For the First Time',
+    url: 'https://www.babylon5first.com/',
+    category: ALWAY_LISTEN,
+  },
+  {
+    name: 'Worlds Beyond Number',
+    url: 'https://worldsbeyondnumber.com/',
+    category: ALWAY_LISTEN,
+  },
+  {
+    name: 'A Life Well Wasted',
+    url: 'https://alifewellwasted.com/',
+    category: NO_LONGER_AIRING,
+  },
+  {
+    name: 'The Shrieking Shack',
+    url: 'https://soundcloud.com/shriekingshack',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: 'Compiler',
+    url: 'https://www.redhat.com/en/compiler-podcast',
+    category: ALWAY_LISTEN,
+  },
+  {
+    name: 'Black Tech Green Money',
+    url: 'https://www.afrotechpodcast.com/',
+    category: USE_TO_LISTEN,
+  },
+  {
+    name: 'Plumbing the Death Star',
+    url: 'https://www.sanspantsradio.com/podcasts/plumbing-the-death-star/',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: 'FOSS Pod',
+    url: 'https://fosspod.content.town/',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: 'Atlas Obscura',
+    url: 'https://www.atlasobscura.com/podcast',
+    category: SOMETIMES_LISTEN,
+  },
+  {
+    name: 'Unsung Science with David Pogue',
+    url: 'https://unsungscience.com/',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: 'Lateral with Tom Scott',
+    url: 'https://lateralcast.com/',
+    category: ABANDONED,
+  },
+  {
+    name: 'Command_Line Heroes',
+    url: 'https://www.redhat.com/en/command-line-heroes',
+    category: STARTED_LISTENING,
+  },
+  {
+    name: 'Sitcom D&D',
+    url: 'https://headgum.com/sitcomdd',
+    category: TO_CHECKOUT,
+  },
+  {
     name: 'Triple Click',
     url: 'https://maximumfun.org/podcasts/triple-click/',
     category: STARTED_LISTENING,
@@ -15,7 +121,7 @@ export default [
   {
     name: 'The Last Archive',
     url: 'https://www.thelastarchive.com/',
-    category: SOMETIMES_LISTEN,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'Revisionist History',
@@ -26,22 +132,22 @@ export default [
   {
     name: 'My First Dungeon',
     url: 'https://anchor.fm/brian-flaherty2',
-    category: SOMETIMES_LISTEN,
+    category: ALWAY_LISTEN,
   },
   {
     name: 'The Twenty Sided Podcast',
     url: 'https://www.twentysidedpodcast.com/',
-    category: SOMETIMES_LISTEN,
+    category: NO_LONGER_AIRING,
   },
   {
     name: 'Endless Thread',
     url: 'https://www.wbur.org/podcasts/endlessthread',
-    category: SOMETIMES_LISTEN,
+    category: ALWAY_LISTEN,
   },
   {
     name: 'Let`s Make A Sci-Fi',
     url: 'https://www.cbc.ca/listen/cbc-podcasts/1061-let-s-make-a-sci-fi',
-    category: SOMETIMES_LISTEN,
+    category: NO_LONGER_AIRING,
   },
   {
     name: 'What`s Your Problem?',
@@ -61,22 +167,23 @@ export default [
   {
     name: 'Critical Role',
     url: 'https://critrole.com/podcast/',
-    category: STARTED_LISTENING,
+    category: ABANDONED,
+    note: 'It`s as good as people say but the episodes are long and there are so many of them.',
   },
   {
     name: 'Smartless',
     url: 'https://www.smartless.com/',
-    category: TO_CHECKOUT,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'Brad and Will Make a Tech Pod',
     url: 'https://techpod.content.town/',
-    category: STARTED_LISTENING,
+    category: ALWAY_LISTEN,
   },
   {
     name: 'Car Show! with Eddie Alterman',
     url: 'https://www.pushkin.fm/podcasts/car-show-with-eddie-alterman',
-    category: STARTED_LISTENING,
+    category: NO_LONGER_AIRING,
   },
   {
     name: 'Dear Hank and John',
@@ -86,12 +193,13 @@ export default [
   {
     name: 'Patented: History of Inventions',
     url: 'https://access.historyhit.com/patented',
-    category: STARTED_LISTENING,
+    category: NO_LONGER_AIRING,
+    note: 'Ended October 2023',
   },
   {
     name: 'Household Faces',
     url: 'https://foreverdogpodcasts.com/podcasts/household-faces/',
-    category: STARTED_LISTENING,
+    category: ABANDONED,
   },
   {
     name: 'Meditative Story',
@@ -101,12 +209,12 @@ export default [
   {
     name: 'Hot Money',
     url: 'https://www.ft.com/content/762e4648-06d7-4abd-8d1e-ccefb74b3244',
-    category: STARTED_LISTENING,
+    category: NO_LONGER_AIRING,
   },
   {
     name: 'Gameplay',
     url: 'https://gameplay.co/',
-    category: STARTED_LISTENING,
+    category: NO_LONGER_AIRING,
     note: 'A narrative podcast about video games and the virtual worlds that power culture and community.',
   },
   {
@@ -124,7 +232,7 @@ export default [
   {
     name: 'Ologies',
     url: 'https://www.alieward.com/ologies',
-    category: STARTED_LISTENING,
+    category: ALWAY_LISTEN,
   },
   {
     name: 'Elon Musk: The Evening Rocket',
@@ -149,7 +257,7 @@ export default [
   {
     name: 'Nice Try!',
     url: 'https://podcasts.voxmedia.com/show/nice-try',
-    category: STARTED_LISTENING,
+    category: NO_LONGER_AIRING,
   },
   {
     name: "Too long; Didn't watch",
@@ -165,7 +273,7 @@ export default [
   {
     name: 'The Worst Idea of All Time',
     url: 'https://podcasts.apple.com/us/podcast/worst-idea-of-all-time-podcast/id824108207',
-    category: ABANDONED,
+    category: USE_TO_LISTEN,
   },
   {
     name: 'Star Trek: The Pod Directive',
@@ -216,7 +324,7 @@ export default [
   {
     name: 'My Dad Wrote A Porno',
     url: 'http://www.mydadwroteaporno.com/podcast',
-    category: ALWAY_LISTEN,
+    category: NO_LONGER_AIRING,
   },
   {
     name: 'Planet Money',

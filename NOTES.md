@@ -15,3 +15,9 @@ How to update: See `Notes on deployment`
 
 Getting Loading (StaticQuery) when gatsby !== 2.23.3 --- NVM not working :(
 "babel-plugin-remove-graphql-queries": "2.9.4",
+
+## TODOS
+- Nostalgia page
+
+### Markdown
+- [how to add markdown](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/)
