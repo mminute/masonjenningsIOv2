@@ -39,6 +39,31 @@ const Downloads = () => (
       <Box paddingY={6}>
         <h3>Minute Inventory</h3>
 
+        <p>Version 1.1.1</p>
+        <p>Fixed a bug with newline characters in the item description</p>
+        <ul>
+          <li>
+            Mac
+            <ul>
+              <ListItem to="/MinuteInventory-1.1.1.dmg" note="(This is probably the one that you want)">
+                MinuteInventory-1.1.1.dmg
+              </ListItem>
+
+              <ListItem to="/MinuteInventory-1.1.1-mac.zip">
+                MinuteInventory-1.1.1-mac.zip
+              </ListItem>
+
+              <ListItem to="/MinuteInventory-1.1.1-arm64.dmg">
+                MinuteInventory-1.1.1-arm64.dmg
+              </ListItem>
+
+              <ListItem to="/MinuteInventory-1.1.1-arm64-mac.zip">
+                MinuteInventory-1.1.1-arm64-mac.zip
+              </ListItem>
+            </ul>
+          </li>
+        </ul>
+
         <p>Version 1.1.0</p>
         <p>Added created date and a way to migrate files from v1.0.0</p>
         <ul>
