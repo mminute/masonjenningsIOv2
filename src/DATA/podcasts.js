@@ -8,6 +8,17 @@ export const NO_LONGER_AIRING = 'noLongerAiring';
 
 export default [
   {
+    name: 'Secret Histories of Nerd Mysteries',
+    url: 'https://maximumfun.org/podcasts/secret-histories-of-nerd-mysteries/',
+    category: ALWAY_LISTEN,
+    note: 'Started listening when they moved to Maximum Fun in Jan 2024. Caught up on the backlog by mid February',
+  },
+  {
+    name: 'Stuff The British Stole',
+    url: 'https://www.cbc.ca/listen/cbc-podcasts/1030-stuff-the-british-stole',
+    category: STARTED_LISTENING,
+  },
+  {
     name: 'Who shat on the floor at my wedding?',
     url: 'https://www.whoshatontheflooratmywedding.com/',
     category: NO_LONGER_AIRING,
@@ -15,12 +26,12 @@ export default [
   {
     name: 'WGBH - The Big Dig',
     url: 'https://www.wgbh.org/podcasts/the-big-dig',
-    category: TO_CHECKOUT,
+    category: NO_LONGER_AIRING,
   },
   {
     name: 'WBUR - Short Run: The Gun Machine',
     url: 'https://www.wbur.org/podcasts/short-run',
-    category: TO_CHECKOUT,
+    category: NO_LONGER_AIRING,
   },
   {
     name: 'Talk of the Table',

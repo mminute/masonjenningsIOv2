@@ -18,6 +18,8 @@ Getting Loading (StaticQuery) when gatsby !== 2.23.3 --- NVM not working :(
 
 ## TODOS
 - Nostalgia page
+- Vehicles page
+- Photos page
 
 ### Markdown
 - [how to add markdown](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/)

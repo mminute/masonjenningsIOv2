@@ -3,15 +3,16 @@ import { Box } from 'gestalt';
 import '../../styles/et-line-font.css';
 import './Languages.css';
 
-const nodeText = 'Build server applications in JS too!';
-const reactText = 'Building delightfully interactive user interfaces in JS.';
-const pythonText = 'The popular kid of general-purpose coding languages.';
-const reduxText = 'State management through unidirectional data flow.';
-const sqlText = 'Data, data, data.  Storage and manipulation.  The basis of web apps.';
-const htmlText = 'Build it clear.  Build it clean. Make it usable.  The crux of the matter.';
 const ajaxText = 'Why wait?  Why refresh? Build it dynamically for in-browser magic.';
+const htmlText = 'Build it clear.  Build it clean. Make it usable.  The crux of the matter.';
 const jsText = 'The scripting language of the Web.  Let’s build intuitively interactive websites.';
+const nodeText = 'Build server applications in JS too!';
+const pythonText = 'The popular kid of general-purpose coding languages.';
+const reactText = 'Building delightfully interactive user interfaces in JS.';
+const reduxText = 'State management through unidirectional data flow.';
 const rubyText = 'RESTFUL back-end applications using the Ruby on Rails web framework. Speed through convention over configuration.';
+const sqlText = 'Data, data, data.  Storage and manipulation.  The basis of web apps.';
+const typescriptText = 'The future of JS.  Strongly typed, scalable, and reliable.';
 
 function Language({ icon, title, text }) {
   const centerDiv = { display: 'flex', justifyContent: 'center' };
@@ -27,7 +28,14 @@ function Language({ icon, title, text }) {
       </div>
 
       <Box marginTop={4}>
-        <div className="verdana gray" style={{ ...centerDiv, textAlign: 'center', fontSize: '12px', width: '80%', margin: 'auto' }}>
+        <div
+          className="verdana gray"
+          style={
+          {
+            ...centerDiv, textAlign: 'center', fontSize: '12px', width: '80%', margin: 'auto',
+          }
+        }
+        >
           {text}
         </div>
       </Box>
@@ -50,6 +58,7 @@ export default function Languages() {
       </Box>
 
       <Box display="flex" justifyContent="center" marginTop={6} wrap>
+        <Language icon="lightbulb" title="TYPESCRIPT" text={typescriptText} />
         <Language icon="genius" title="REACT" text={reactText} />
         <Language icon="strategy" title="REDUX" text={reduxText} />
         <Language icon="telescope" title="NODE" text={nodeText} />
